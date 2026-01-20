@@ -3,598 +3,823 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEC Med Healthcare Survey</title>
+    <meta name="description" content="BEC Med - Healthcare Supply Chain Solutions for Nursing Homes and Long-term Care Facilities">
+    <title>BEC Med - Healthcare Supply Chain Solutions</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            background-color: #f8f9fa;
         }
-
+        
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
+            padding: 0 20px;
         }
-
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c7a9e 0%, #1e5a7a 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 80px 20px;
             text-align: center;
         }
-
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 10px;
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
-
-        .header p {
-            font-size: 1.1em;
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
             opacity: 0.95;
         }
-
-        .form-content {
-            padding: 40px 30px;
+        
+        .cta-button {
+            display: inline-block;
+             background-color: #28a745;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
         }
-
-        .section {
+        
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-white {
+            background-color: white;
+        }
+        
+        .section-gray {
+            background-color: #f8f9fa;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            color: #2c7a9e;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            color: #1e5a7a;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Pain Points Grid */
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .pain-point {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #28a745;
+        }
+        
+        .pain-point h4 {
+            font-size: 1.3em;
+            color: #2c7a9e;
+            margin-bottom: 10px;
+        }
+        
+        .pain-point p {
+            color: #555;
+        }
+        
+        /* Solutions */
+        .solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #2c7a9e;
+        }
+        
+        .solution-card h3 {
+            color: #2c7a9e;
+            margin-top: 0;
+        }
+        
+        .solution-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .solution-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .solution-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .solution-card ul li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .benefit-box {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .benefit-box strong {
+            color: #1e5a7a;
+        }
+        
+        /* Survey Section */
+        .survey-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .form-section {
             margin-bottom: 40px;
             padding-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
+            border-bottom: 2px solid #e9ecef;
         }
-
-        .section:last-child {
+        
+        .form-section:last-of-type {
             border-bottom: none;
         }
-
-        .section-title {
-            font-size: 1.5em;
-            color: #667eea;
-            margin-bottom: 20px;
+        
+        .form-section h4 {
+            font-size: 1.4em;
+            color: #2c7a9e;
+            margin-bottom: 25px;
             padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
+            border-bottom: 2px solid #28a745;
         }
-
-        .question {
+        
+        .form-group {
             margin-bottom: 25px;
         }
-
-        .question-label {
+        
+        .form-group label {
             display: block;
             font-weight: 600;
-            margin-bottom: 10px;
+            margin-bottom:  12px;
             color: #333;
+            font-size: 1.05em;
         }
-
-        .required {
-            color: #e74c3c;
+        
+        .radio-group, .checkbox-group {
+            margin-left: 10px;
         }
-
+        
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .radio-group input, .checkbox-group input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
         input[type="text"],
         input[type="email"],
         input[type="tel"],
         textarea {
             width: 100%;
             padding: 12px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
             font-size: 1em;
-            transition: border-color 0.3s;
+            font-family: inherit;
         }
-
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
         input[type="text"]:focus,
         input[type="email"]:focus,
         input[type="tel"]:focus,
         textarea:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #2c7a9e;
+            box-shadow: 0 0 0 3px rgba(44, 122, 158, 0.1);
         }
-
-        textarea {
-            min-height: 100px;
-            resize: vertical;
+        
+        .submit-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 30px auto 0;
         }
-
-        .radio-group,
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+        
+        .submit-button:hover {
+            background-color: #218838;
         }
-
-        .radio-option,
-        .checkbox-option {
-            display: flex;
-            align-items: center;
-            padding: 10px;
+        
+        .submit-button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        /* Thank You Section */
+        .thank-you {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            text-align: center;
+            display: none;
+        }
+        
+        .thank-you.show {
+            display: block;
+        }
+        
+        .thank-you h2 {
+            color: white;
+        }
+        
+        .next-steps {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
             border-radius: 8px;
-            cursor: pointer;
-            transition: background 0.3s;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: left;
         }
-
-        .radio-option:hover,
-        .checkbox-option:hover {
-            background: #f8f9ff;
+        
+        .next-steps ul {
+            list-style: none;
+            margin: 20px 0;
         }
-
-        input[type="radio"],
-        input[type="checkbox"] {
-            margin-right: 10px;
-            width: 18px;
-            height: 18px;
-            cursor: pointer;
+        
+        .next-steps ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .next-steps ul li:before {
+            content: "✓";
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e5a7a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        footer p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Error/Success Messages */
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .message.show {
+            display: block;
+        }
+        
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+            
+            .hero p {
+                font-size: 1em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            .survey-form {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .checkmark {
+            color: #28a745;
+            font-weight: bold;
         }
 
         .other-input {
             margin-top: 10px;
-            display: none;
-        }
-
-        .other-input.show {
-            display: block;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1em;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-        }
-
-        .submit-btn:active {
-            transform: translateY(0);
-        }
-
-        .submit-btn:disabled {
-            background: #ccc;
-            cursor: not-allowed;
-            transform: none;
-        }
-
-        .message {
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: none;
-        }
-
-        .message.success {
-            background: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-             display: block;
-        }
-
-        .message.error {
-            background: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-            display: block;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 20px;
-            font-size: 1.1em;
-            color: #667eea;
-        }
-
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 1.6em;
-            }
-            
-            .form-content {
-                padding: 30px 20px;
-            }
+            margin-left: 30px;
+            width: calc(100% - 30px);
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Healthcare Facility Operations Survey</h1>
-            <p>Help us understand your challenges and find better solutions</p>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Are Cash Flow Constraints and Inventory Management Slowing Down Your Facility?</h1>
+            <p>We're developing innovative solutions for nursing homes and long-term care facilities - and we want YOUR input to make sure we're solving your real challenges.</p>
+            <a href="#survey" class="cta-button">Share Your Challenges</a>
         </div>
+    </section>
 
-        <div class="form-content">
-            <div id="messageBox" class="message"></div>
-
-            <form id="surveyForm">
+    <!-- Challenge Section -->
+    <section class="section-white">
+        <div class="container">
+            <h2>We Know Running a Care Facility Comes with Unique Pressures</h2>
+            
+            <div class="pain-points">
+                <div class="pain-point">
+                    <h4>💰 Cash Flow Struggles?</h4>
+                    <p>Are delayed reimbursements from Medicare/Medicaid making it difficult to pay suppliers on time?</p>
+                </div>
                 
-                <!-- SECTION A: About You & Your Facility -->
-                <div class="section">
-                    <h2 class="section-title">Section A: About You & Your Facility</h2>
+                <div class="pain-point">
+                    <h4>📦 Inventory Headaches?</h4>
+                    <p>Are you manually tracking supplies, facing unexpected stockouts, or discovering expired products too late?</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h4>⏰ Time-Consuming Manual Processes?</h4>
+                    <p>Is your staff spending hours on inventory counts, order management, and paperwork instead of patient care?</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h4>💸 Emergency Orders Eating Your Budget?</h4>
+                    <p>Are last-minute supply orders costing you premium prices when you run out unexpectedly?</p>
+                </div>
+            </div>
+            
+            <p class="intro-text" style="margin-top: 40px;">
+                <strong>If any of these sound familiar, we're building something specifically for YOU - but we need your insights first.</strong>
+            </p>
+        </div>
+    </section>
 
-                    <div class="question">
-                        <label class="question-label">1. What is your role at the facility? <span class="required">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="role" value="Finance/Accounting/CFO" required>
-                                Finance/Accounting/CFO
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="role" value="Operations/Administrator/COO">
-                                Operations/Administrator/COO
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="role" value="Purchasing/Supply Chain">
-                                Purchasing/Supply Chain
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="role" value="Director/Executive Leadership">
-                                Director/Executive Leadership
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="role" value="Other" id="roleOtherRadio">
-                                Other
-                            </label>
-                        </div>
-                        <input type="text" id="roleOtherInput" name="roleOther" class="other-input" placeholder="Please specify your role">
+    <!-- Solutions Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2>Our Proposed Solutions</h2>
+            <p class="intro-text">We're exploring two innovative solutions designed specifically for healthcare facilities. We want to know which matters most to YOU.</p>
+            
+            <div class="solutions">
+                <!-- Solution 1 -->
+                <div class="solution-card">
+                    <div class="icon">💳</div>
+                    <h3>Solution #1: Flexible Financing for Medical Supplies</h3>
+                    
+                    <p><strong style="color: #dc3545;">The Problem:</strong><br>
+                    Traditional suppliers demand payment in 30 days or less, but your reimbursements take much longer.</p>
+                    
+                    <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
+                    <ul>
+                        <li>Up to 90-day payment terms on medical supplies</li>
+                        <li>Fast approval process with AI-powered underwriting</li>
+                        <li>Predictable financing costs (transparent pricing)</li>
+                        <li>Partner with you to manage cash flow, not strain it</li>
+                    </ul>
+                    
+                    <div class="benefit-box">
+                        <strong>The Benefit:</strong><br>
+                        Free up working capital, avoid cash crunches, and maintain healthy supplier relationships without scrambling for payments.
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">2. What type of healthcare facility do you work for? <span class="required">*</span></label>
-                        <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="facilityType" value="Nursing Home" required>
-                                Nursing Home
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilityType" value="Long-term Care Facility">
-                                Long-term Care Facility
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilityType" value="Assisted Living Facility">
-                                Assisted Living Facility
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilityType" value="Skilled Nursing Facility">
-                                Skilled Nursing Facility
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilityType" value="Other" id="facilityTypeOtherRadio">
-                                Other
-                            </label>
-                        </div>
-                        <input type="text" id="facilityTypeOtherInput" name="facilityTypeOther" class="other-input" placeholder="Please specify facility type">
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="solution-card">
+                    <div class="icon">📊</div>
+                    <h3>Solution #2: Smart Warehouse Management with RFID Technology</h3>
+                    
+                    <p><strong style="color: #dc3545;">The Problem:</strong><br>
+                    Manual inventory tracking is time-consuming, error-prone, and costly. You're either overstocked (wasting money) or understocked (causing emergencies).</p>
+                    
+                    <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
+                    <ul>
+                        <li>Automated inventory tracking with RFID technology (no manual scanning!)</li>
+                        <li>Real-time stock level monitoring with automatic low-stock alerts</li>
+                        <li>Expiration date management to reduce waste</li>
+                         <li>Usage forecasting based on your historical data</li>
+                        <li>Seasonal buying recommendations (buy the right amount at the right time)</li>
+                        <li>Simple email-based ordering - no complex logins required</li>
+                        <li>Detailed reports on pricing, item usage, and cost optimization</li>
+                    </ul>
+                    
+                    <div class="benefit-box">
+                        <strong>The Benefit:</strong><br>
+                        Reduce labor costs, eliminate stockouts and waste, make data-driven purchasing decisions, and let your staff focus on patient care instead of counting supplies.
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="question">
-                        <label class="question-label">3. What is the size of your facility? <span class="required">*</span></label>
+    <!-- Input Section -->
+    <section class="section-white">
+        <div class="container">
+            <h2>We Need Your Input</h2>
+            <p class="intro-text">
+                Before we finalize these solutions, we want to hear from the people who would actually use them - professionals like you who understand the daily realities of running a care facility.
+            </p>
+            
+            <p class="intro-text"><strong>Your feedback will directly shape:</strong></p>
+            <div style="max-width: 600px; margin: 20px auto; text-align: left;">
+                <p><span class="checkmark">✓</span> Which features we prioritize</p>
+                <p><span class="checkmark">✓</span> How we price our services</p>
+                <p><span class="checkmark">✓</span> What integrations and support you need</p>
+                <p><span class="checkmark">✓</span> Whether we're solving real problems or missing the mark</p>
+            </div>
+            
+            <p class="intro-text" style="margin-top: 30px;">
+                <strong>This 2-minute survey will help us create solutions that truly work for your facility.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey" class="section-gray">
+        <div class="container">
+            <h2>Quick Survey: Your Challenges & Priorities</h2>
+            
+            <div id="formMessage" class="message"></div>
+            
+            <form class="survey-form" id="surveyForm">
+                
+                <!-- Section A: About You & Your Facility -->
+                <div class="form-section">
+                    <h4>Section A: About You & Your Facility</h4>
+                    
+                    <div class="form-group">
+                        <label>1. What is your role at the facility? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="facilitySize" value="Small (Under 50 beds)" required>
-                                Small (Under 50 beds)
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilitySize" value="Medium (50-150 beds)">
-                                Medium (50-150 beds)
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilitySize" value="Large (150-300 beds)">
-                                Large (150-300 beds)
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="facilitySize" value="Very Large (300+ beds)">
-                                Very Large (300+ beds)
-                            </label>
+                            <label><input type="radio" name="role" value="Finance/Accounting/CFO" required> Finance/Accounting/CFO</label>
+                            <label><input type="radio" name="role" value="Operations/Administrator/COO"> Operations/Administrator/COO</label>
+                            <label><input type="radio" name="role" value="Purchasing/Supply Chain"> Purchasing/Supply Chain</label>
+                            <label><input type="radio" name="role" value="Director/Executive Leadership"> Director/Executive Leadership</label>
+                            <label><input type="radio" name="role" value="Other" id="roleOther"> Other</label>
+                            <input type="text" id="roleOtherText" name="roleOther" class="other-input" placeholder="Please specify" style="display:none">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>2. What type of healthcare facility do you work for? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="facilityType" value="Nursing Home" required> Nursing Home</label>
+                            <label><input type="radio" name="facilityType" value="Long-term Care Facility"> Long-term Care Facility</label>
+                            <label><input type="radio" name="facilityType" value="Assisted Living Facility"> Assisted Living Facility</label>
+                            <label><input type="radio" name="facilityType" value="Skilled Nursing Facility"> Skilled Nursing Facility</label>
+                            <label><input type="radio" name="facilityType" value="Other" id="facilityTypeOther"> Other</label>
+                            <input type="text" id="facilityTypeOtherText" name="facilityTypeOther" class="other-input" placeholder="Please specify" style="display:none">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>3. What is the size of your facility? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="facilitySize" value="Small (Under 50 beds)" required> Small (Under 50 beds)</label>
+                            <label><input type="radio" name="facilitySize" value="Medium (50-150 beds)"> Medium (50-150 beds)</label>
+                            <label><input type="radio" name="facilitySize" value="Large (150-300 beds)"> Large (150-300 beds)</label>
+                            <label><input type="radio" name="facilitySize" value="Very Large (300+ beds)"> Very Large (300+ beds)</label>
                         </div>
                     </div>
                 </div>
-
-                <!-- SECTION B: Current Challenges -->
-                <div class="section">
-                    <h2 class="section-title">Section B: Current Challenges</h2>
-
-                    <div class="question">
-                        <label class="question-label">4. How would you rate your current challenges with cash flow and supplier payment terms? <span class="required">*</span></label>
+                
+                <!-- Section B: Current Challenges -->
+                <div class="form-section">
+                    <h4>Section B: Current Challenges</h4>
+                    
+                    <div class="form-group">
+                        <label>4. How would you rate your current challenges with cash flow and supplier payment terms? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="cashFlowChallenge" value="Major problem - we struggle regularly" required>
-                                Major problem - we struggle regularly
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="cashFlowChallenge" value="Moderate issue - it's manageable but stressful">
-                                Moderate issue - it's manageable but stressful
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="cashFlowChallenge" value="Minor concern - occasional issues">
-                                Minor concern - occasional issues
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="cashFlowChallenge" value="Not a problem for us">
-                                Not a problem for us
-                            </label>
+                            <label><input type="radio" name="cashFlowChallenge" value="Major problem - we struggle regularly" required> Major problem - we struggle regularly</label>
+                            <label><input type="radio" name="cashFlowChallenge" value="Moderate issue - it's manageable but stressful"> Moderate issue - it's manageable but stressful</label>
+                            <label><input type="radio" name="cashFlowChallenge" value="Minor concern - occasional issues"> Minor concern - occasional issues</label>
+                            <label><input type="radio" name="cashFlowChallenge" value="Not a problem for us"> Not a problem for us</label>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">5. How would you rate your current challenges with inventory management? <span class="required">*</span></label>
+                    
+                    <div class="form-group">
+                        <label>5. How would you rate your current challenges with inventory management? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="inventoryChallenge" value="Major problem - manual, time-consuming, error-prone" required>
-                                Major problem - manual, time-consuming, error-prone
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="inventoryChallenge" value="Moderate issue - we manage but it's inefficient">
-                                Moderate issue - we manage but it's inefficient
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="inventoryChallenge" value="Minor concern - could be better">
-                                Minor concern - could be better
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="inventoryChallenge" value="Not a problem - we have a good system">
-                                Not a problem - we have a good system
-                            </label>
+                            <label><input type="radio" name="inventoryChallenge" value="Major problem - manual, time-consuming, error-prone" required> Major problem - manual, time-consuming, error-prone</label>
+                            <label><input type="radio" name="inventoryChallenge" value="Moderate issue - we manage but it's inefficient"> Moderate issue - we manage but it's inefficient</label>
+                            <label><input type="radio" name="inventoryChallenge" value="Minor concern - could be better"> Minor concern - could be better</label>
+                            <label><input type="radio" name="inventoryChallenge" value="Not a problem - we have a good system"> Not a problem - we have a good system</label>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">6. How much time does your staff spend on manual inventory tracking per week? <span class="required">*</span></label>
+                    
+                    <div class="form-group">
+                        <label>6. How much time does your staff spend on manual inventory tracking per week? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="timeOnInventory" value="Less than 5 hours" required>
-                                Less than 5 hours
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="timeOnInventory" value="5-10 hours">
-                                5-10 hours
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="timeOnInventory" value="10-20 hours">
-                                10-20 hours
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="timeOnInventory" value="More than 20 hours">
-                                More than 20 hours
-                            </label>
+                            <label><input type="radio" name="timeOnInventory" value="Less than 5 hours" required> Less than 5 hours</label>
+                            <label><input type="radio" name="timeOnInventory" value="5-10 hours"> 5-10 hours</label>
+                            <label><input type="radio" name="timeOnInventory" value="10-20 hours"> 10-20 hours</label>
+                            <label><input type="radio" name="timeOnInventory" value="More than 20 hours"> More than 20 hours</label>
                         </div>
                     </div>
                 </div>
-
-                <!-- SECTION C: Solution Interest -->
-                <div class="section">
-                    <h2 class="section-title">Section C: Solution Interest</h2>
-
-                    <div class="question">
-                        <label class="question-label">7. Which solution would be MORE valuable to your facility? <span class="required">*</span></label>
+                
+                <!-- Section C: Solution Interest -->
+                <div class="form-section">
+                    <h4>Section C: Solution Interest</h4>
+                    
+                    <div class="form-group">
+                        <label>7. Which solution would be MORE valuable to your facility? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="solutionPreference" value="90-Day Financing Terms for Medical Supplies" required>
-                                90-Day Financing Terms for Medical Supplies
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="solutionPreference" value="RFID-Based Warehouse Management Software">
-                                RFID-Based Warehouse Management Software
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="solutionPreference" value="Both are equally important">
-                                Both are equally important
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="solutionPreference" value="Neither addresses our main concerns">
-                                Neither addresses our main concerns
-                            </label>
+                            <label><input type="radio" name="solutionPreference" value="90-Day Financing Terms for Medical Supplies" required> 90-Day Financing Terms for Medical Supplies</label>
+                            <label><input type="radio" name="solutionPreference" value="RFID-Based Warehouse Management Software"> RFID-Based Warehouse Management Software</label>
+                            <label><input type="radio" name="solutionPreference" value="Both are equally important"> Both are equally important</label>
+                            <label><input type="radio" name="solutionPreference" value="Neither addresses our main concerns"> Neither addresses our main concerns</label>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">8. For the 90-day financing option: What percentage fee would you consider reasonable? <span class="required">*</span></label>
+                    
+                    <div class="form-group">
+                        <label>8. For the 90-day financing option: What percentage fee would you consider reasonable to access extended payment terms? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="financingFee" value="Up to 3% of order value" required>
-                                Up to 3% of order value
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="financingFee" value="4-6% of order value">
-                                4-6% of order value
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="financingFee" value="7-9% of order value">
-                                7-9% of order value
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="financingFee" value="10%+ would still be worth it">
-                                10%+ would still be worth it
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="financingFee" value="Not interested in financing">
-                                Not interested in financing
-                            </label>
+                            <label><input type="radio" name="financingFee" value="Up to 3% of order value" required> Up to 3% of order value</label>
+                            <label><input type="radio" name="financingFee" value="4-6% of order value"> 4-6% of order value</label>
+                            <label><input type="radio" name="financingFee" value="7-9% of order value"> 7-9% of order value</label>
+                            <label><input type="radio" name="financingFee" value="10%+ would still be worth it"> 10%+ would still be worth it</label>
+                            <label><input type="radio" name="financingFee" value="Not interested in financing"> Not interested in financing</label>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">9. For the warehouse management software: What would you consider a fair monthly cost? <span class="required">*</span></label>
+                    
+                    <div class="form-group">
+                        <label>9. For the warehouse management software: What would you consider a fair monthly cost for a system that automates inventory tracking, forecasting, and ordering? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="Under $200/month" required>
-                                Under $200/month
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="$200-$500/month">
-                                $200-$500/month
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="$500-$1,000/month">
-                                $500-$1,000/month
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="$1,000-$2,000/month">
-                                $1,000-$2,000/month
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="$2,000+/month">
-                                $2,000+/month
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="softwareCost" value="Would depend on facility size and features">
-                                Would depend on facility size and features
-                            </label>
+                            <label><input type="radio" name="softwareCost" value="Under $200/month" required> Under $200/month</label>
+                            <label><input type="radio" name="softwareCost" value="$200-$500/month"> $200-$500/month</label>
+                            <label><input type="radio" name="softwareCost" value="$500-$1,000/month"> $500-$1,000/month</label>
+                            <label><input type="radio" name="softwareCost" value="$1,000-$2,000/month"> $1,000-$2,000/month</label>
+                            <label><input type="radio" name="softwareCost" value="$2,000+/month"> $2,000+/month</label>
+                            <label><input type="radio" name="softwareCost" value="Would depend on facility size and features"> Would depend on facility size and features</label>
                         </div>
                     </div>
                 </div>
-
-                <!-- SECTION D: Next Steps -->
-                <div class="section">
-                    <h2 class="section-title">Section D: Next Steps</h2>
-
-                    <div class="question">
-                        <label class="question-label">10. Would you be interested in a brief 15-minute discovery call? <span class="required">*</span></label>
+                
+                <!-- Section D: Next Steps -->
+                <div class="form-section">
+                    <h4>Section D: Next Steps</h4>
+                    
+                    <div class="form-group">
+                        <label>10. Would you be interested in a brief 15-minute discovery call to discuss your specific challenges and how we might help? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="discoveryCall" value="Yes - I'd like to schedule a call" required>
-                                Yes - I'd like to schedule a call
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="discoveryCall" value="Maybe - contact me with more information first">
-                                Maybe - contact me with more information first
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="discoveryCall" value="Not at this time">
-                                Not at this time
-                            </label>
+                            <label><input type="radio" name="discoveryCall" value="Yes - I'd like to schedule a call" required> Yes - I'd like to schedule a call</label>
+                            <label><input type="radio" name="discoveryCall" value="Maybe - contact me with more information first"> Maybe - contact me with more information first</label>
+                            <label><input type="radio" name="discoveryCall" value="Not at this time"> Not at this time</label>
                         </div>
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">11. Would you be interested in being an early partner/beta tester? <span class="required">*</span></label>
+                    
+                    <div class="form-group">
+                        <label>11. Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
                         <div class="radio-group">
-                            <label class="radio-option">
-                                <input type="radio" name="betaTester" value="Yes - I'd like to explore this opportunity" required>
-                                Yes - I'd like to explore this opportunity
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="betaTester" value="Tell me more about what this involves">
-                                Tell me more about what this involves
-                            </label>
-                            <label class="radio-option">
-                                <input type="radio" name="betaTester" value="Not interested right now">
-                                Not interested right now
-                            </label>
+                            <label><input type="radio" name="betaTester" value="Yes - I'd like to explore this opportunity" required> Yes - I'd like to explore this opportunity</label>
+                            <label><input type="radio" name="betaTester" value="Tell me more about what this involves"> Tell me more about what this involves</label>
+                            <label><input type="radio" name="betaTester" value="Not interested right now"> Not interested right now</label>
                         </div>
                     </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="section">
-                    <h2 class="section-title">12. Contact Information (Optional but helpful for follow-up)</h2>
-
-                    <div class="question">
-                        <label class="question-label">Name:</label>
-                        <input type="text" name="name" placeholder="Your full name">
+                    
+                    <div class="form-group">
+                        <label>12. Contact Information (Optional but helpful for follow-up)</label>
+                        
+                        <label style="margin-top: 15px;">Name:</label>
+                        <input type="text" name="name" id="contactName" placeholder="Your full name">
+                        
+                        <label style="margin-top: 15px;">Facility Name:</label>
+                        <input type="text" name="facilityName" id="facilityName" placeholder="Your facility name">
+                        
+                        <label style="margin-top: 15px;">Email:</label>
+                        <input type="email" name="email" id="contactEmail" placeholder="your.email@example.com">
+                        
+                        <label style="margin-top: 15px;">Phone:</label>
+                        <input type="tel" name="phone" id="contactPhone" placeholder="(555) 123-4567">
+                        
+                        <label style="margin-top: 15px;">Best time to reach you:</label>
+                        <input type="text" name="bestTime" id="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
                     </div>
-
-                    <div class="question">
-                        <label class="question-label">Facility Name:</label>
-                        <input type="text" name="facilityName" placeholder="Your facility name">
-                    </div>
-
-                    <div class="question">
-                        <label class="question-label">Email:</label>
-                        <input type="email" name="email" placeholder="your.email@example.com">
-                    </div>
-
-                    <div class="question">
-                        <label class="question-label">Phone:</label>
-                        <input type="tel" name="phone" placeholder="(555) 123-4567">
-                    </div>
-
-                    <div class="question">
-                        <label class="question-label">Best time to reach you:</label>
-                        <input type="text" name="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
+                    
+                    <div class="form-group">
+                        <label>13. Any additional comments or challenges we should know about?</label>
+                        <textarea name="comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
                     </div>
                 </div>
-
-                <!-- Additional Comments -->
-                <div class="section">
-                    <h2 class="section-title">13. Any additional comments or challenges we should know about?</h2>
-                    <div class="question">
-                        <textarea name="comments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
-                    </div>
-                </div>
-
-                <button type="submit" class="submit-btn" id="submitBtn">Submit Survey</button>
+                
+                <button type="submit" class="submit-button" id="submitBtn">Submit Survey</button>
             </form>
         </div>
-    </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="thank-you section-gray" id="thankYouSection">
+        <div class="container">
+            <h2>Thank You for Your Valuable Input! 🙏</h2>
+            <p style="font-size: 1.2em;">Your feedback is incredibly valuable and will directly influence how we build solutions for care facilities like yours.</p>
+            
+            <div class="next-steps">
+                <p><strong>What happens next:</strong></p>
+                <ul>
+                    <li>We'll review your responses carefully</li>
+                    <li>If you requested a call, we'll reach out within 2 business days to schedule</li>
+                    <li>We'll keep you updated on our progress</li>
+                    <li>Early partners will get exclusive access and special pricing</li>
+                </ul>
+            </div>
+             
+            <div class="contact-info">
+                <p><strong>In the meantime, if you have questions or want to chat sooner:</strong></p>
+                <p>📧 <strong>Email:</strong> <a href="mailto:office@brassociatesny.com">office@brassociatesny.com</a></p>
+                <p>📞 <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>BEC Med</h3>
+            <p><em>Innovative solutions for healthcare supply chain management</em></p>
+            
+            <div class="footer-links">
+                <a href="#about">About Our Mission</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.7;">&copy; 2026 BEC Med. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script>
-        // Webhook URL
+        // Monday.com webhook URL
         const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyiIEIAKnfmnqyIvUwmExuE7Ag8i-uJmBcnwX6yh6_lmdHZz5hCackE-kCP_k8M44_w/exec';
 
-        // Handle "Other" option visibility
-        document.getElementById('roleOtherRadio').addEventListener('change', function() {
-            document.getElementById('roleOtherInput').classList.add('show');
+        // Handle "Other" option visibility for Role
+        document.getElementById('roleOther').addEventListener('change', function() {
+            document.getElementById('roleOtherText').style.display = 'block';
         });
-
+        
         document.querySelectorAll('input[name="role"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 if (this.value !== 'Other') {
-                    document.getElementById('roleOtherInput').classList.remove('show');
-                    document.getElementById('roleOtherInput').value = '';
+                    document.getElementById('roleOtherText').style.display = 'none';
                 }
             });
         });
 
-        document.getElementById('facilityTypeOtherRadio').addEventListener('change', function() {
-            document.getElementById('facilityTypeOtherInput').classList.add('show');
+        // Handle "Other" option visibility for Facility Type
+        document.getElementById('facilityTypeOther').addEventListener('change', function() {
+            document.getElementById('facilityTypeOtherText').style.display = 'block';
         });
-
+        
         document.querySelectorAll('input[name="facilityType"]').forEach(radio => {
             radio.addEventListener('change', function() {
                 if (this.value !== 'Other') {
-                    document.getElementById('facilityTypeOtherInput').classList.remove('show');
-                    document.getElementById('facilityTypeOtherInput').value = '';
+                    document.getElementById('facilityTypeOtherText').style.display = 'none';
                 }
             });
         });
-
-        // Form submission
+        
+        // Form submission handler
         document.getElementById('surveyForm').addEventListener('submit', async function(e) {
             e.preventDefault();
-
-            const submitBtn = document.getElementById('submitBtn');
-            const messageBox = document.getElementById('messageBox');
-
+            
+            const submitButton = document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
             // Disable submit button
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Submitting...';
-
-            // Get form data
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            // Collect form data
             const formData = new FormData(this);
             const data = {};
-
-            formData.forEach((value, key) => {
+            
+            for (let [key, value] of formData.entries()) {
                 data[key] = value;
-            });
-
+            }
+            
             try {
                 // Send to Monday.com via Google Apps Script
                 const response = await fetch(WEBHOOK_URL, {
@@ -605,31 +830,44 @@
                     },
                     body: JSON.stringify(data)
                 });
-
-                // Show success message
-                messageBox.className = 'message success';
-                messageBox.textContent = '✅ Thank you! Your survey has been submitted successfully. We\'ll be in touch soon!';
-                messageBox.style.display = 'block';
-
-                // Reset form
-                this.reset();
-
-                // Scroll to message
-                messageBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
+                
+                // Hide form, show thank you
+                document.getElementById('survey').style.display = 'none';
+                document.getElementById('thankYouSection').classList.add('show');
+                
+                // Scroll to thank you section
+                document.getElementById('thankYouSection').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
             } catch (error) {
-                // Show error message
-                messageBox.className = 'message error';
-                messageBox.textContent = '❌ There was an error submitting your survey. Please try again or contact us directly.';
-                messageBox.style.display = 'block';
-
                 console.error('Error:', error);
-            } finally {
-                // Re-enable submit button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Submit Survey';
+                
+                // Show error message
+                formMessage.textContent = 'There was an error submitting your survey. Please try again.';
+                formMessage.className = 'message error show';
+                
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Survey';
             }
         });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
     </script>
+
 </body>
 </html>
+                            
