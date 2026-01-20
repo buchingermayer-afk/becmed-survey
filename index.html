@@ -1,429 +1,841 @@
-<!-- Hero Section -->
-<section class="hero">
-    <div class="container">
-        <h1>Are Cash Flow Constraints and Inventory Management Slowing Down Your Facility?</h1>
-        <p>We're developing innovative solutions for nursing homes and long-term care facilities - and we want YOUR input to make sure we're solving your real challenges.</p>
-        <a href="#survey" class="cta-button">Share Your Challenges</a>
-    </div>
-</section>
-
-<!-- Challenge Section -->
-<section class="section-white">
-    <div class="container">
-        <h2>We Know Running a Care Facility Comes with Unique Pressures</h2>
-        
-        <div class="pain-points">
-            <div class="pain-point">
-                <h4>💰 Cash Flow Struggles?</h4>
-                <p>Are delayed reimbursements from Medicare/Medicaid making it difficult to pay suppliers on time?</p>
-            </div>
-            
-            <div class="pain-point">
-                <h4>📦 Inventory Headaches?</h4>
-                <p>Are you manually tracking supplies, facing unexpected stockouts, or discovering expired products too late?</p>
-            </div>
-            
-            <div class="pain-point">
-                <h4>⏰ Time-Consuming Manual Processes?</h4>
-                <p>Is your staff spending hours on inventory counts, order management, and paperwork instead of patient care?</p>
-            </div>
-            
-            <div class="pain-point">
-                <h4>💸 Emergency Orders Eating Your Budget?</h4>
-                <p>Are last-minute supply orders costing you premium prices when you run out unexpectedly?</p>
-            </div>
-        </div>
-        
-        <p class="intro-text" style="margin-top: 40px;">
-            <strong>If any of these sound familiar, we're building something specifically for YOU - but we need your insights first.</strong>
-        </p>
-    </div>
-</section>
-
-<!-- Solutions Section -->
-<section class="section-gray">
-    <div class="container">
-        <h2>Our Proposed Solutions</h2>
-        <p class="intro-text">We're exploring two innovative solutions designed specifically for healthcare facilities. We want to know which matters most to YOU.</p>
-        
-        <div class="solutions">
-            <!-- Solution 1 -->
-            <div class="solution-card">
-                <div class="icon">💳</div>
-                <h3>Solution #1: Flexible Financing for Medical Supplies</h3>
-                
-                <p><strong style="color: #dc3545;">The Problem:</strong><br>
-                Traditional suppliers demand payment in 30 days or less, but your reimbursements take much longer.</p>
-                
-                <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
-                <ul>
-                    <li>Up to 90-day payment terms on medical supplies</li>
-                    <li>Fast approval process with AI-powered underwriting</li>
-                    <li>Predictable financing costs (transparent pricing)</li>
-                    <li>Partner with you to manage cash flow, not strain it</li>
-                </ul>
-                
-                <div class="benefit-box">
-                    <strong>The Benefit:</strong><br>
-                    Free up working capital, avoid cash crunches, and maintain healthy supplier relationships without scrambling for payments.
-                </div>
-            </div>
-            
-            <!-- Solution 2 -->
-            <div class="solution-card">
-                <div class="icon">📊</div>
-                <h3>Solution #2: Smart Warehouse Management with RFID Technology</h3>
-                
-                <p><strong style="color: #dc3545;">The Problem:</strong><br>
-                Manual inventory tracking is time-consuming, error-prone, and costly. You're either overstocked (wasting money) or understocked (causing emergencies).</p>
-                
-                <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
-                <ul>
-                    <li>Automated inventory tracking with RFID technology (no manual scanning!)</li>
-                    <li>Real-time stock level monitoring with automatic low-stock alerts</li>
-                    <li>Expiration date management to reduce waste</li>
-                    <li>Usage forecasting based on your historical data</li>
-                    <li>Seasonal buying recommendations (buy the right amount at the right time)</li>
-                    <li>Simple email-based ordering - no complex logins required</li>
-                    <li>Detailed reports on pricing, item usage, and cost optimization</li>
-                </ul>
-                
-                <div class="benefit-box">
-                    <strong>The Benefit:</strong><br>
-                    Reduce labor costs, eliminate stockouts and waste, make data-driven purchasing decisions, and let your staff focus on patient care instead of counting supplies.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Input Section -->
-<section class="section-white">
-    <div class="container">
-        <h2>We Need Your Input</h2>
-        <p class="intro-text">
-            Before we finalize these solutions, we want to hear from the people who would actually use them - professionals like you who understand the daily realities of running a care facility.
-        </p>
-        
-        <p class="intro-text"><strong>Your feedback will directly shape:</strong></p>
-        <div style="max-width: 600px; margin: 20px auto; text-align: left;">
-            <p><span class="checkmark">✓</span> Which features we prioritize</p>
-            <p><span class="checkmark">✓</span> How we price our services</p>
-            <p><span class="checkmark">✓</span> What integrations and support you need</p>
-            <p><span class="checkmark">✓</span> Whether we're solving real problems or missing the mark</p>
-        </div>
-        
-        <p class="intro-text" style="margin-top: 30px;">
-            <strong>This 2-minute survey will help us create solutions that truly work for your facility.</strong>
-        </p>
-    </div>
-</section>
-
-<!-- Survey Section -->
-<section id="survey" class="section-gray">
-    <div class="container">
-        <h2>Quick Survey: Your Challenges & Priorities</h2>
-        
-        <div id="formMessage" class="message"></div>
-        
-        <form class="survey-form" id="surveyForm">
-            
-            <!-- Section A: About You & Your Facility -->
-            <div class="form-section">
-                <h4>Section A: About You & Your Facility</h4>
-                
-                <div class="form-group">
-                    <label>1. What is your role at the facility? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="role" value="finance" required> Finance/Accounting/CFO</label>
-                        <label><input type="radio" name="role" value="operations"> Operations/Administrator/COO</label>
-                        <label><input type="radio" name="role" value="purchasing"> Purchasing/Supply Chain</label>
-                        <label><input type="radio" name="role" value="leadership"> Director/Executive Leadership</label>
-                        <label><input type="radio" name="role" value="other"> Other: <input type="text" name="role_other" id="roleOther" style="width: 200px; display: inline-block; margin-left: 10px;"></label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>2. What type of healthcare facility do you work for? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="facility_type" value="nursing_home" required> Nursing Home</label>
-                        <label><input type="radio" name="facility_type" value="long_term_care"> Long-term Care Facility</label>
-                        <label><input type="radio" name="facility_type" value="assisted_living"> Assisted Living Facility</label>
-                        <label><input type="radio" name="facility_type" value="skilled_nursing"> Skilled Nursing Facility</label>
-                        <label><input type="radio" name="facility_type" value="other_facility"> Other: <input type="text" name="facility_type_other" id="facilityOther" style="width: 200px; display: inline-block; margin-left: 10px;"></label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>3. What is the size of your facility? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="facility_size" value="small" required> Small (Under 50 beds)</label>
-                        <label><input type="radio" name="facility_size" value="medium"> Medium (50-150 beds)</label>
-                        <label><input type="radio" name="facility_size" value="large"> Large (150-300 beds)</label>
-                        <label><input type="radio" name="facility_size" value="very_large"> Very Large (300+ beds)</label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Section B: Current Challenges -->
-            <div class="form-section">
-                <h4>Section B: Current Challenges</h4>
-                
-                <div class="form-group">
-                    <label>4. How would you rate your current challenges with cash flow and supplier payment terms? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="cashflow_challenge" value="major" required> Major problem - we struggle regularly</label>
-                        <label><input type="radio" name="cashflow_challenge" value="moderate"> Moderate issue - it's manageable but stressful</label>
-                        <label><input type="radio" name="cashflow_challenge" value="minor"> Minor concern - occasional issues</label>
-                        <label><input type="radio" name="cashflow_challenge" value="none"> Not a problem for us</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>5. How would you rate your current challenges with inventory management? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="inventory_challenge" value="major" required> Major problem - manual, time-consuming, error-prone</label>
-                        <label><input type="radio" name="inventory_challenge" value="moderate"> Moderate issue - we manage but it's inefficient</label>
-                        <label><input type="radio" name="inventory_challenge" value="minor"> Minor concern - could be better</label>
-                        <label><input type="radio" name="inventory_challenge" value="none"> Not a problem - we have a good system</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>6. How much time does your staff spend on manual inventory tracking per week? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="time_spent" value="under_5" required> Less than 5 hours</label>
-                        <label><input type="radio" name="time_spent" value="5_10"> 5-10 hours</label>
-                        <label><input type="radio" name="time_spent" value="10_20"> 10-20 hours</label>
-                        <label><input type="radio" name="time_spent" value="over_20"> More than 20 hours</label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Section C: Solution Interest -->
-            <div class="form-section">
-                <h4>Section C: Solution Interest</h4>
-                
-                <div class="form-group">
-                    <label>7. Which solution would be MORE valuable to your facility? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="solution_preference" value="financing" required> 90-Day Financing Terms for Medical Supplies</label>
-                        <label><input type="radio" name="solution_preference" value="warehouse"> RFID-Based Warehouse Management Software</label>
-                        <label><input type="radio" name="solution_preference" value="both"> Both are equally important</label>
-                        <label><input type="radio" name="solution_preference" value="neither"> Neither addresses our main concerns</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>8. For the 90-day financing option: What percentage fee would you consider reasonable to access extended payment terms? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="financing_fee" value="up_to_3" required> Up to 3% of order value</label>
-                        <label><input type="radio" name="financing_fee" value="4_6"> 4-6% of order value</label>
-                        <label><input type="radio" name="financing_fee" value="7_9"> 7-9% of order value</label>
-                        <label><input type="radio" name="financing_fee" value="10_plus"> 10%+ would still be worth it</label>
-                        <label><input type="radio" name="financing_fee" value="not_interested"> Not interested in financing</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>9. For the warehouse management software: What would you consider a fair monthly cost for a system that automates inventory tracking, forecasting, and ordering? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="software_cost" value="under_200" required> Under $200/month</label>
-                        <label><input type="radio" name="software_cost" value="200_500"> $200-$500/month</label>
-                        <label><input type="radio" name="software_cost" value="500_1000"> $500-$1,000/month</label>
-                        <label><input type="radio" name="software_cost" value="1000_2000"> $1,000-$2,000/month</label>
-                        <label><input type="radio" name="software_cost" value="2000_plus"> $2,000+/month</label>
-                        <label><input type="radio" name="software_cost" value="depends"> Would depend on facility size and features</label>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Section D: Next Steps -->
-            <div class="form-section">
-                <h4>Section D: Next Steps</h4>
-                
-                <div class="form-group">
-                    <label>10. Would you be interested in a brief 15-minute discovery call to discuss your specific challenges and how we might help? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="discovery_call" value="yes" required> Yes - I'd like to schedule a call</label>
-                        <label><input type="radio" name="discovery_call" value="maybe"> Maybe - contact me with more information first</label>
-                        <label><input type="radio" name="discovery_call" value="no"> Not at this time</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>11. Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="beta_tester" value="yes" required> Yes - I'd like to explore this opportunity</label>
-                        <label><input type="radio" name="beta_tester" value="tell_more"> Tell me more about what this involves</label>
-                        <label><input type="radio" name="beta_tester" value="not_interested"> Not interested right now</label>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label>12. Contact Information (Optional but helpful for follow-up)</label>
-                    
-                    <label style="margin-top: 15px;">Name:</label>
-                    <input type="text" name="contact_name" id="contactName" placeholder="Your full name">
-                    
-                    <label style="margin-top: 15px;">Facility Name:</label>
-                    <input type="text" name="facility_name" id="facilityName" placeholder="Your facility name">
-                    
-                    <label style="margin-top: 15px;">Email:</label>
-                    <input type="email" name="contact_email" id="contactEmail" placeholder="your.email@example.com">
-                    
-                    <label style="margin-top: 15px;">Phone:</label>
-                    <input type="tel" name="contact_phone" id="contactPhone" placeholder="(555) 123-4567">
-                    
-                    <label style="margin-top: 15px;">Best time to reach you:</label>
-                    <input type="text" name="best_time" id="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
-                </div>
-                
-                <div class="form-group">
-                    <label>13. Any additional comments or challenges we should know about?</label>
-                    <textarea name="additional_comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
-                </div>
-            </div>
-            
-            <button type="submit" class="submit-button" id="submitBtn">Submit Survey</button>
-        </form>
-    </div>
-</section>
-
-<!-- Thank You Section -->
-<section class="thank-you section-gray" id="thankYouSection">
-    <div class="container">
-        <h2>Thank You for Your Valuable Input! 🙏</h2>
-        <p style="font-size: 1.2em;">Your feedback is incredibly valuable and will directly influence how we build solutions for care facilities like yours.</p>
-        
-        <div class="next-steps">
-            <p><strong>What happens next:</strong></p>
-            <ul>
-                <li>We'll review your responses carefully</li>
-                <li>If you requested a call, we'll reach out within 2 business days to schedule</li>
-                <li>We'll keep you updated on our progress</li>
-                <li>Early partners will get exclusive access and special pricing</li>
-            </ul>
-        </div>
-        
-        <div class="contact-info">
-            <p><strong>In the meantime, if you have questions or want to chat sooner:</strong></p>
-            <p>📧 <strong>Email:</strong> <a href="mailto:contact@becmed.com">contact@becmed.com</a></p>
-            <p>📞 <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <h3>BEC Med</h3>
-        <p><em>Innovative solutions for healthcare supply chain management</em></p>
-        
-        <div class="footer-links">
-            <a href="#about">About Our Mission</a>
-            <a href="#privacy">Privacy Policy</a>
-            <a href="#contact">Contact Us</a>
-        </div>
-        
-        <p style="margin-top: 30px; opacity: 0.7;">&copy; 2026 BEC Med. All rights reserved.</p>
-    </div>
-</footer>
-
-<script>
-    // Form submission handler
-    document.getElementById('surveyForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const submitButton = document.getElementById('submitBtn');
-        const formMessage = document.getElementById('formMessage');
-        
-        // Disable submit button
-        submitButton.disabled = true;
-        submitButton.textContent = 'Submitting...';
-        
-        // Collect form data
-        const formData = new FormData(this);
-         const data = {};
-        
-        for (let [key, value] of formData.entries()) {
-            data[key] = value;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BEC Med - Healthcare Supply Chain Solutions for Nursing Homes and Long-term Care Facilities">
+    <title>BEC Med - Healthcare Supply Chain Solutions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
         
-        // Add timestamp
-        data.timestamp = new Date().toISOString();
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
         
-        // OPTION 1: Send to your email using FormSubmit (free service)
-        // Replace YOUR_EMAIL with your actual email
-        fetch('https://formsubmit.co/YOUR_EMAIL_HERE', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(data)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-            
-            // Hide form, show thank you
-            document.getElementById('survey').style.display = 'none';
-            document.getElementById('thankYouSection').classList.add('show');
-            
-            // Scroll to thank you section
-            document.getElementById('thankYouSection').scrollIntoView({
-                behavior: 'smooth'
-            });
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            
-            // Show error message
-            formMessage.textContent = 'There was an error submitting your survey. Please try again or contact us directly.';
-            formMessage.className = 'message error show';
-            
-            // Re-enable button
-            submitButton.disabled = false;
-            submitButton.textContent = 'Submit Survey';
-        });
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
         
-        /* OPTION 2: If you want to use Google Sheets instead:
-        // Use a Google Apps Script Web App
-        fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-        })
-        .then(() => {
-            document.getElementById('survey').style.display = 'none';
-            document.getElementById('thankYouSection').classList.add('show');
-            document.getElementById('thankYouSection').scrollIntoView({behavior: 'smooth'});
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-            formMessage.textContent = 'There was an error submitting your survey. Please try again.';
-            formMessage.className = 'message error show';
-            submitButton.disabled = false;
-            submitButton.textContent = 'Submit Survey';
-        });
-        */
-    });
-    
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c7a9e 0%, #1e5a7a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+             background-color: #28a745;
+            color: white;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .cta-button:hover {
+            background-color: #218838;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 60px 20px;
+        }
+        
+        .section-white {
+            background-color: white;
+        }
+        
+        .section-gray {
+            background-color: #f8f9fa;
+        }
+        
+        h2 {
+            font-size: 2.2em;
+            color: #2c7a9e;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h3 {
+            font-size: 1.6em;
+            color: #1e5a7a;
+            margin-bottom: 15px;
+            margin-top: 30px;
+        }
+        
+        /* Pain Points Grid */
+        .pain-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .pain-point {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #28a745;
+        }
+        
+        .pain-point h4 {
+            font-size: 1.3em;
+            color: #2c7a9e;
+            margin-bottom: 10px;
+        }
+        
+        .pain-point p {
+            color: #555;
+        }
+        
+        /* Solutions */
+        .solutions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .solution-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-top: 5px solid #2c7a9e;
+        }
+        
+        .solution-card h3 {
+            color: #2c7a9e;
+            margin-top: 0;
+        }
+        
+        .solution-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+        
+        .solution-card ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .solution-card ul li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .solution-card ul li:before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .benefit-box {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            border-left: 4px solid #28a745;
+        }
+        
+        .benefit-box strong {
+            color: #1e5a7a;
+        }
+        
+        /* Survey Section */
+        .survey-form {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-top: 30px;
+        }
+        
+        .form-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e9ecef;
+        }
+        
+        .form-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .form-section h4 {
+            font-size: 1.4em;
+            color: #2c7a9e;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #28a745;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+            font-size: 1.05em;
+        }
+        
+        .radio-group, .checkbox-group {
+            margin-left: 10px;
+        }
+        
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        
+        .radio-group input, .checkbox-group input {
+            margin-right: 10px;
+            cursor: pointer;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            font-family: inherit;
+        }
+        
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #2c7a9e;
+            box-shadow: 0 0 0 3px rgba(44, 122, 158, 0.1);
+        }
+        
+        .submit-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 50px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: block;
+            margin: 30px auto 0;
+        }
+        
+        .submit-button:hover {
+            background-color: #218838;
+        }
+        
+        .submit-button:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        
+        /* Thank You Section */
+        .thank-you {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            text-align: center;
+            display: none;
+        }
+        
+        .thank-you.show {
+            display: block;
+        }
+        
+        .thank-you h2 {
+            color: white;
+        }
+        
+        .next-steps {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px auto;
+            max-width: 600px;
+            text-align: left;
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .next-steps ul li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .next-steps ul li:before {
+            content: "✓";
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.3em;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
+            font-size: 1.1em;
+        }
+        
+        .contact-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #1e5a7a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        footer h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        footer p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .footer-links {
+            margin-top: 20px;
+        }
+        
+        .footer-links a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Error/Success Messages */
+        .message {
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .message.show {
+            display: block;
+        }
+        
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8em;
             }
+            
+            .hero p {
+                font-size: 1em;
+            }
+            
+            h2 {
+                font-size: 1.8em;
+            }
+            
+            h3 {
+                font-size: 1.3em;
+            }
+            
+            .survey-form {
+                padding: 25px 20px;
+            }
+        }
+        
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .intro-text {
+            max-width: 800px;
+            margin: 0 auto  30px;
+            text-align: center;
+            font-size: 1.1em;
+            color: #555;
+        }
+        
+        .checkmark {
+            color: #28a745;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Are Cash Flow Constraints and Inventory Management Slowing Down Your Facility?</h1>
+            <p>We're developing innovative solutions for nursing homes and long-term care facilities - and we want YOUR input to make sure we're solving your real challenges.</p>
+            <a href="#survey" class="cta-button">Share Your Challenges</a>
+        </div>
+    </section>
+
+    <!-- Challenge Section -->
+    <section class="section-white">
+        <div class="container">
+            <h2>We Know Running a Care Facility Comes with Unique Pressures</h2>
+            
+            <div class="pain-points">
+                <div class="pain-point">
+                    <h4>💰 Cash Flow Struggles?</h4>
+                    <p>Are delayed reimbursements from Medicare/Medicaid making it difficult to pay suppliers on time?</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h4>📦 Inventory Headaches?</h4>
+                    <p>Are you manually tracking supplies, facing unexpected stockouts, or discovering expired products too late?</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h4>⏰ Time-Consuming Manual Processes?</h4>
+                    <p>Is your staff spending hours on inventory counts, order management, and paperwork instead of patient care?</p>
+                </div>
+                
+                <div class="pain-point">
+                    <h4>💸 Emergency Orders Eating Your Budget?</h4>
+                    <p>Are last-minute supply orders costing you premium prices when you run out unexpectedly?</p>
+                </div>
+            </div>
+            
+            <p class="intro-text" style="margin-top: 40px;">
+                <strong>If any of these sound familiar, we're building something specifically for YOU - but we need your insights first.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="section-gray">
+        <div class="container">
+            <h2>Our Proposed Solutions</h2>
+            <p class="intro-text">We're exploring two innovative solutions designed specifically for healthcare facilities. We want to know which matters most to YOU.</p>
+            
+            <div class="solutions">
+                <!-- Solution 1 -->
+                <div class="solution-card">
+                    <div class="icon">💳</div>
+                    <h3>Solution #1: Flexible Financing for Medical Supplies</h3>
+                    
+                    <p><strong style="color: #dc3545;">The Problem:</strong><br>
+                    Traditional suppliers demand payment in 30 days or less, but your reimbursements take much longer.</p>
+                    
+                    <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
+                    <ul>
+                        <li>Up to 90-day payment terms on medical supplies</li>
+                        <li>Fast approval process with AI-powered underwriting</li>
+                        <li>Predictable financing costs (transparent pricing)</li>
+                        <li>Partner with you to manage cash flow, not strain it</li>
+                    </ul>
+                    
+                    <div class="benefit-box">
+                        <strong>The Benefit:</strong><br>
+                        Free up working capital, avoid cash crunches, and maintain healthy supplier relationships without scrambling for payments.
+                    </div>
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="solution-card">
+                    <div class="icon">📊</div>
+                    <h3>Solution #2: Smart Warehouse Management with RFID Technology</h3>
+                    
+                    <p><strong style="color: #dc3545;">The Problem:</strong><br>
+                    Manual inventory tracking is time-consuming, error-prone, and costly. You're either overstocked (wasting money) or understocked (causing emergencies).</p>
+                    
+                    <p style="margin-top: 20px;"><strong style="color: #2c7a9e;">Our Solution:</strong></p>
+                    <ul>
+                        <li>Automated inventory tracking with RFID technology (no manual scanning!)</li>
+                        <li>Real-time stock level monitoring with automatic low-stock alerts</li>
+                        <li>Expiration date management to reduce waste</li>
+                        <li>Usage forecasting based on your historical data</li>
+                        <li>Seasonal buying recommendations (buy the right amount at the right time)</li>
+                        <li>Simple email-based ordering - no complex logins required</li>
+                        <li>Detailed reports on pricing, item usage, and cost optimization</li>
+                    </ul>
+                    
+                    <div class="benefit-box">
+                        <strong>The Benefit:</strong><br>
+                        Reduce labor costs, eliminate stockouts and waste, make data-driven purchasing decisions, and let your staff focus on patient care instead of counting supplies.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Input Section -->
+    <section class="section-white">
+        <div class="container">
+            <h2>We Need Your Input</h2>
+            <p class="intro-text">
+                Before we finalize these solutions, we want to hear from the people who would actually use them - professionals like you who understand the daily realities of running a care facility.
+            </p>
+            
+            <p class="intro-text"><strong>Your feedback will directly shape:</strong></p>
+            <div style="max-width: 600px; margin: 20px auto; text-align: left;">
+                <p><span class="checkmark">✓</span> Which features we prioritize</p>
+                <p><span class="checkmark">✓</span> How we price our services</p>
+                <p><span class="checkmark">✓</span> What integrations and support you need</p>
+                <p><span class="checkmark">✓</span> Whether we're solving real problems or missing the mark</p>
+            </div>
+            
+            <p class="intro-text" style="margin-top: 30px;">
+                <strong>This 2-minute survey will help us create solutions that truly work for your facility.</strong>
+            </p>
+        </div>
+    </section>
+
+    <!-- Survey Section -->
+    <section id="survey" class="section-gray">
+        <div class="container">
+            <h2>Quick Survey: Your Challenges & Priorities</h2>
+            
+            <div id="formMessage" class="message"></div>
+            
+            <form class="survey-form" id="surveyForm">
+                
+                <!-- Section A: About You & Your Facility -->
+                <div class="form-section">
+                    <h4>Section A: About You & Your Facility</h4>
+                    
+                    <div class="form-group">
+                        <label>1. What is your role at the facility? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="role" value="finance" required> Finance/Accounting/CFO</label>
+                            <label><input type="radio" name="role" value="operations"> Operations/Administrator/COO</label>
+                            <label><input type="radio" name="role" value="purchasing"> Purchasing/Supply Chain</label>
+                            <label><input type="radio" name="role" value="leadership"> Director/Executive Leadership</label>
+                            <label><input type="radio" name="role" value="other"> Other: <input type="text" name="role_other" id="roleOther" style="width: 200px; display: inline-block; margin-left: 10px;"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>2. What type of healthcare facility do you work for? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="facility_type" value="nursing_home" required> Nursing Home</label>
+                            <label><input type="radio" name="facility_type" value="long_term_care"> Long-term Care Facility</label>
+                            <label><input type="radio" name="facility_type" value="assisted_living"> Assisted Living Facility</label>
+                            <label><input type="radio" name="facility_type" value="skilled_nursing"> Skilled Nursing Facility</label>
+                            <label><input type="radio" name="facility_type" value="other_facility"> Other: <input type="text" name="facility_type_other" id="facilityOther" style="width: 200px; display: inline-block; margin-left: 10px;"></label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>3. What is the size of your facility? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="facility_size" value="small" required> Small (Under 50 beds)</label>
+                            <label><input type="radio" name="facility_size" value="medium"> Medium (50-150 beds)</label>
+                            <label><input type="radio" name="facility_size" value="large"> Large (150-300 beds)</label>
+                            <label><input type="radio" name="facility_size" value="very_large"> Very Large (300+ beds)</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section B: Current Challenges -->
+                <div class="form-section">
+                     <h4>Section B: Current Challenges</h4>
+                    
+                    <div class="form-group">
+                        <label>4. How would you rate your current challenges with cash flow and supplier payment terms? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="cashflow_challenge" value="major" required> Major problem - we struggle regularly</label>
+                            <label><input type="radio" name="cashflow_challenge" value="moderate"> Moderate issue - it's manageable but stressful</label>
+                            <label><input type="radio" name="cashflow_challenge" value="minor"> Minor concern - occasional issues</label>
+                            <label><input type="radio" name="cashflow_challenge" value="none"> Not a problem for us</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>5. How would you rate your current challenges with inventory management? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="inventory_challenge" value="major" required> Major problem - manual, time-consuming, error-prone</label>
+                            <label><input type="radio" name="inventory_challenge" value="moderate"> Moderate issue - we manage but it's inefficient</label>
+                            <label><input type="radio" name="inventory_challenge" value="minor"> Minor concern - could be better</label>
+                            <label><input type="radio" name="inventory_challenge" value="none"> Not a problem - we have a good system</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>6. How much time does your staff spend on manual inventory tracking per week? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="time_spent" value="under_5" required> Less than 5 hours</label>
+                            <label><input type="radio" name="time_spent" value="5_10"> 5-10 hours</label>
+                            <label><input type="radio" name="time_spent" value="10_20"> 10-20 hours</label>
+                            <label><input type="radio" name="time_spent" value="over_20"> More than 20 hours</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section C: Solution Interest -->
+                <div class="form-section">
+                    <h4>Section C: Solution Interest</h4>
+                    
+                    <div class="form-group">
+                        <label>7. Which solution would be MORE valuable to your facility? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="solution_preference" value="financing" required> 90-Day Financing Terms for Medical Supplies</label>
+                            <label><input type="radio" name="solution_preference" value="warehouse"> RFID-Based Warehouse Management Software</label>
+                            <label><input type="radio" name="solution_preference" value="both"> Both are equally important</label>
+                            <label><input type="radio" name="solution_preference" value="neither"> Neither addresses our main concerns</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>8. For the 90-day financing option: What percentage fee would you consider reasonable to access extended payment terms? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="financing_fee" value="up_to_3" required> Up to 3% of order value</label>
+                            <label><input type="radio" name="financing_fee" value="4_6"> 4-6% of order value</label>
+                            <label><input type="radio" name="financing_fee" value="7_9"> 7-9% of order value</label>
+                            <label><input type="radio" name="financing_fee" value="10_plus"> 10%+ would still be worth it</label>
+                            <label><input type="radio" name="financing_fee" value="not_interested"> Not interested in financing</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>9. For the warehouse management software: What would you consider a fair monthly cost for a system that automates inventory tracking, forecasting, and ordering? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="software_cost" value="under_200" required> Under $200/month</label>
+                            <label><input type="radio" name="software_cost" value="200_500"> $200-$500/month</label>
+                            <label><input type="radio" name="software_cost" value="500_1000"> $500-$1,000/month</label>
+                            <label><input type="radio" name="software_cost" value="1000_2000"> $1,000-$2,000/month</label>
+                            <label><input type="radio" name="software_cost" value="2000_plus"> $2,000+/month</label>
+                            <label><input type="radio" name="software_cost" value="depends"> Would depend on facility size and features</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Section D: Next Steps -->
+                <div class="form-section">
+                    <h4>Section D: Next Steps</h4>
+                    
+                    <div class="form-group">
+                        <label>10. Would you be interested in a brief 15-minute discovery call to discuss your specific challenges and how we might help? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="discovery_call" value="yes" required> Yes - I'd like to schedule a call</label>
+                            <label><input type="radio" name="discovery_call" value="maybe"> Maybe - contact me with more information first</label>
+                            <label><input type="radio" name="discovery_call" value="no"> Not at this time</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>11. Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="beta_tester" value="yes" required> Yes - I'd like to explore this opportunity</label>
+                            <label><input type="radio" name="beta_tester" value="tell_more"> Tell me more about what this involves</label>
+                            <label><input type="radio" name="beta_tester" value="not_interested"> Not interested right now</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>12. Contact Information (Optional but helpful for follow-up)</label>
+                        
+                        <label style="margin-top: 15px;">Name:</label>
+                        <input type="text" name="contact_name" id="contactName" placeholder="Your full name">
+                        
+                        <label style="margin-top: 15px;">Facility Name:</label>
+                        <input type="text" name="facility_name" id="facilityName" placeholder="Your facility name">
+                        
+                        <label style="margin-top: 15px;">Email:</label>
+                        <input type="email" name="contact_email" id="contactEmail" placeholder="your.email@example.com">
+                        
+                        <label style="margin-top: 15px;">Phone:</label>
+                        <input type="tel" name="contact_phone" id="contactPhone" placeholder="(555) 123-4567">
+                        
+                        <label style="margin-top: 15px;">Best time to reach you:</label>
+                        <input type="text" name="best_time" id="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>13. Any additional comments or challenges we should know about?</label>
+                        <textarea name="additional_comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-button" id="submitBtn">Submit Survey</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Thank You Section -->
+    <section class="thank-you section-gray" id="thankYouSection">
+        <div class="container">
+            <h2>Thank You for Your Valuable Input! 🙏</h2>
+            <p style="font-size: 1.2em;">Your feedback is incredibly valuable and will directly influence how we build solutions for care facilities like yours.</p>
+            
+            <div class="next-steps">
+                <p><strong>What happens next:</strong></p>
+                <ul>
+                    <li>We'll review your responses carefully</li>
+                    <li>If you requested a call, we'll reach out within 2 business days to schedule</li>
+                    <li>We'll keep you updated on our progress</li>
+                    <li>Early partners will get exclusive access and special pricing</li>
+                </ul>
+            </div>
+            
+            <div class="contact-info">
+                <p><strong>In the meantime, if you have questions or want to chat sooner:</strong></p>
+                <p>📧 <strong>Email:</strong> <a href="mailto:contact@becmed.com">contact@becmed.com</a></p>
+                <p>📞 <strong>Phone:</strong> <a href="tel:+15551234567">(555) 123-4567</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <h3>BEC Med</h3>
+            <p><em>Innovative solutions for healthcare supply chain management</em></p>
+            
+            <div class="footer-links">
+                <a href="#about">About Our Mission</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.7;">&copy; 2026 BEC Med. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Form submission handler
+        document.getElementById('surveyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitButton =  document.getElementById('submitBtn');
+            const formMessage = document.getElementById('formMessage');
+            
+            // Disable submit button
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                data[key] = value;
+            }
+            
+            // Add timestamp
+            data.timestamp = new Date().toISOString();
+            
+            // Send to FormSubmit (free email service)
+            fetch('https://formsubmit.co/YOUR_EMAIL_HERE', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                
+                // Hide form, show thank you
+                document.getElementById('survey').style.display = 'none';
+                document.getElementById('thankYouSection').classList.add('show');
+                
+                // Scroll to thank you section
+                document.getElementById('thankYouSection').scrollIntoView({
+                    behavior: 'smooth'
+                });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                
+                // Show error message
+                formMessage.textContent = 'There was an error submitting your survey. Please try again or contact us directly.';
+                formMessage.className = 'message error show';
+                
+                // Re-enable button
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit Survey';
+            });
         });
-    });
-</script>
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+    
