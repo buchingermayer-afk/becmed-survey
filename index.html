@@ -823,13 +823,14 @@
             try {
                 // Send to Monday.com via Google Apps Script
                 const response = await fetch(WEBHOOK_URL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
-                });
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data)
+});
+
+console.log('Response:', response);  // Debug line
                 
                 // Hide form, show thank you
                 document.getElementById('survey').style.display = 'none';
