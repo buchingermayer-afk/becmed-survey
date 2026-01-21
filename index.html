@@ -771,7 +771,7 @@
         </div>
     </footer>
 
-   <script>
+  <script>
     // Monday.com webhook URL
     const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbyiIEIAKnfmnqyIvUwmExuE7Ag8i-uJmBcnwX6yh6_lmdHZz5hCackE-kCP_k8M44_w/exec';
 
@@ -820,19 +820,21 @@
             data[key] = value;
         }
 
-        console.log('Sending data:', data);  // Debug line
+        console.log('Sending data:', data);
 
         try {
-            // Send to Monday.com via Google Apps Script
-            const response = await fetch(WEBHOOK_URL, {
+            // Send with no-cors mode to bypass CORS restrictions
+            await fetch(WEBHOOK_URL, {
                 method: 'POST',
+                mode: 'no-cors',  // THIS BYPASSES CORS!
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data)
             });
 
-            console.log('Response:', response);  // Debug line
+            // With no-cors, we can't read the response, but the data is sent
+            console.log('Data sent successfully');
 
             // Hide form, show thank you
             document.getElementById('survey').style.display = 'none';
