@@ -571,165 +571,164 @@
                 <div class="form-section">
                     <h4>Section A: About You & Your Facility</h4>
 
-                    <div class="form-group">
-                        <label>1. What is your role at the facility? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="role" value="Finance" required> Finance</label>
-                            <label><input type="radio" name="role" value="Accounting"> Accounting</label>
-                            <label><input type="radio" name="role" value="CFO"> CFO</label>
-                            <label><input type="radio" name="role" value="Operations"> Operations</label>
-                            <label><input type="radio" name="role" value="Administrator"> Administrator</label>
-                            <label><input type="radio" name="role" value="COO"> COO</label>
-                            <label><input type="radio" name="role" value="Purchasing"> Purchasing</label>
-                            <label><input type="radio" name="role" value="Supply Chain"> Supply Chain</label>
-                            <label><input type="radio" name="role" value="Director"> Director</label>
-                            <label><input type="radio" name="role" value="Executive Leadership"> Executive Leadership</label>
-                            <label><input type="radio" name="role" value="Other" id="roleOther"> Other</label>
-                            <input type="text" id="roleOtherText" name="roleOther" class="other-input" placeholder="Please specify" style="display:none">
-                        </div>
-                    </div>
+     <!-- SECTION A: About You & Your Facility -->
+<div class="form-section">
+    <h4>Section A: About You & Your Facility</h4>
 
-                    <div class="form-group">
-    <label>2. What type of healthcare facility do you work for? *</label>
-    <div class="radio-group">
-        <label><input type="radio" name="facilityType" value="Nursing Home" required> Nursing Home</label>
-        <label><input type="radio" name="facilityType" value="Long-term Care Facility"> Long-term Care Facility</label>
-        <label><input type="radio" name="facilityType" value="Assisted Living Facility"> Assisted Living Facility</label>
-        <label><input type="radio" name="facilityType" value="Skilled Nursing Facility"> Skilled Nursing Facility</label>
-        <label><input type="radio" name="facilityType" value="Other" id="facilityTypeOther"> Other</label>
-        <input type="text" id="facilityTypeOtherText" name="facilityTypeOther" class="other-input" placeholder="Please specify" style="display:none">
+    <div class="form-group">
+        <label>1. What is your role at the facility? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="role" value="Finance" required> Finance/Accounting/CFO</label>
+            <label><input type="radio" name="role" value="Operations"> Operations/Administrator/COO</label>
+            <label><input type="radio" name="role" value="Purchasing"> Purchasing/Supply Chain</label>
+            <label><input type="radio" name="role" value="Director"> Director/Executive Leadership</label>
+            <label><input type="radio" name="role" value="Other" id="roleOther"> Other</label>
+             <input type="text" id="roleOtherText" name="roleOther" class="other-input" placeholder="Please specify" style="display:none">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>2. What type of healthcare facility do you work for? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="facilityType" value="Nursing Home" required> Nursing Home</label>
+            <label><input type="radio" name="facilityType" value="Long-term Care Facility"> Long-term Care Facility</label>
+            <label><input type="radio" name="facilityType" value="Assisted Living Facility"> Assisted Living Facility</label>
+            <label><input type="radio" name="facilityType" value="Skilled Nursing Facility"> Skilled Nursing Facility</label>
+            <label><input type="radio" name="facilityType" value="Other" id="facilityTypeOther"> Other</label>
+            <input type="text" id="facilityTypeOtherText" name="facilityTypeOther" class="other-input" placeholder="Please specify" style="display:none">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>3. What is the size of your facility? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="facilitySize" value="Small (Under 50 beds)" required> Small (Under 50 beds)</label>
+            <label><input type="radio" name="facilitySize" value="Medium (50-150 beds)"> Medium (50-150 beds)</label>
+            <label><input type="radio" name="facilitySize" value="Large (150-300 beds)"> Large (150-300 beds)</label>
+            <label><input type="radio" name="facilitySize" value="Very Large (300+ beds)"> Very Large (300+ beds)</label>
+        </div>
     </div>
 </div>
 
-                   <div class="form-group">
-    <label>3. What is the size of your facility? *</label>
-    <div class="radio-group">
-        <label><input type="radio" name="facilitySize" value="Small (Under 50 beds)" required> Small (Under 50 beds)</label>
-        <label><input type="radio" name="facilitySize" value="Medium (50-150 beds)"> Medium (50-150 beds)</label>
-        <label><input type="radio" name="facilitySize" value="Large (150-300 beds)"> Large (150-300 beds)</label>
-        <label><input type="radio" name="facilitySize" value="Very Large (300+ beds)"> Very Large (300+ beds)</label>
+<!-- SECTION B: Current Challenges -->
+<div class="form-section">
+    <h4>Section B: Current Challenges</h4>
+
+    <div class="form-group">
+        <label>4. How would you rate your current challenges with cash flow and supplier payment terms? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="cashFlowChallenge" value="Major problem" required> Major problem - we struggle regularly</label>
+            <label><input type="radio" name="cashFlowChallenge" value="Moderate issue"> Moderate issue - it's manageable but stressful</label>
+            <label><input type="radio" name="cashFlowChallenge" value="Minor concern"> Minor concern - occasional issues</label>
+            <label><input type="radio" name="cashFlowChallenge" value="Not a problem"> Not a problem for us</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>5. How would you rate your current challenges with inventory management? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="inventoryChallenge" value="Major problem" required> Major problem - manual, time-consuming, error-prone</label>
+            <label><input type="radio" name="inventoryChallenge" value="Moderate issue"> Moderate issue - we manage but it's inefficient</label>
+            <label><input type="radio" name="inventoryChallenge" value="Minor concern"> Minor concern - could be better</label>
+            <label><input type="radio" name="inventoryChallenge" value="Not a problem"> Not a problem - we have a good system</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>6. How much time does your staff spend on manual inventory tracking per week? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="timeOnInventory" value="Less than 5 hours" required> Less than 5 hours</label>
+            <label><input type="radio" name="timeOnInventory" value="5-10 hours"> 5-10 hours</label>
+            <label><input type="radio" name="timeOnInventory" value="10-20 hours"> 10-20 hours</label>
+            <label><input type="radio" name="timeOnInventory" value="More than 20 hours"> More than 20 hours</label>
+        </div>
     </div>
 </div>
 
-                <!-- Section B: Current Challenges -->
-                <div class="form-section">
-                    <h4>Section B: Current Challenges</h4>
+<!-- SECTION C: Solution Interest -->
+<div class="form-section">
+    <h4>Section C: Solution Interest</h4>
 
-                    <div class="form-group">
-    <label>4. How would you rate your current challenges with cash flow and supplier payment terms? *</label>
-    <div class="radio-group">
-        <label><input type="radio" name="cashFlowChallenge" value="Major problem" required> Major problem - we struggle regularly</label>
-        <label><input type="radio" name="cashFlowChallenge" value="Moderate issue"> Moderate issue - it's manageable but stressful</label>
-        <label><input type="radio" name="cashFlowChallenge" value="Minor concern"> Minor concern - occasional issues</label>
-        <label><input type="radio" name="cashFlowChallenge" value="Not a problem"> Not a problem for us</label>
+    <div class="form-group">
+        <label>7. Which solution would be MORE valuable to your facility? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="solutionPreference" value="Financing" required> 90-Day Financing Terms for Medical Supplies</label>
+            <label><input type="radio" name="solutionPreference" value="RFID Software"> RFID-Based Warehouse Management Software</label>
+            <label><input type="radio" name="solutionPreference" value="Both equally"> Both are equally important</label>
+            <label><input type="radio" name="solutionPreference" value="Neither"> Neither addresses our main concerns</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>8. For the 90-day financing option: What percentage fee would you consider reasonable to access extended payment terms? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="financingFee" value="Up to 3%" required> Up to 3% of order value</label>
+            <label><input type="radio" name="financingFee" value="4-6%"> 4-6% of order value</label>
+            <label><input type="radio" name="financingFee" value="7-9%"> 7-9% of order value</label>
+            <label><input type="radio" name="financingFee" value="10%+"> 10%+ would still be worth it</label>
+            <label><input type="radio" name="financingFee" value="Not interested"> Not interested in financing</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>9. For the warehouse management software: What would you consider a fair monthly cost for a system that automates inventory tracking, forecasting, and ordering? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="softwareCost" value="Under $200" required> Under $200/month</label>
+            <label><input type="radio" name="softwareCost" value="$200-$500"> $200-$500/month</label>
+            <label><input type="radio" name="softwareCost" value="$500-$1000"> $500-$1,000/month</label>
+            <label><input type="radio" name="softwareCost" value="$1000-$2000"> $1,000-$2,000/month</label>
+            <label><input type="radio" name="softwareCost" value="$2000+"> $2,000+/month</label>
+            <label><input type="radio" name="softwareCost" value="Depends"> Would depend on facility size and features</label>
+        </div>
     </div>
 </div>
 
-                    <div class="form-group">
-    <label>5. How would you rate your current challenges with inventory management? *</label>
-    <div class="radio-group">
-        <label><input type="radio" name="inventoryChallenge" value="Major problem" required> Major problem - we struggle regularly</label>
-        <label><input type="radio" name="inventoryChallenge" value="Moderate issue"> Moderate issue - it's manageable but stressful</label>
-        <label><input type="radio" name="inventoryChallenge" value="Minor concern"> Minor concern - occasional issues</label>
-        <label><input type="radio" name="inventoryChallenge" value="Not a problem"> Not a problem for us</label>
+<!-- SECTION D: Next Steps -->
+<div class="form-section">
+    <h4>Section D: Next Steps</h4>
+
+    <div class="form-group">
+        <label>10. Would you be interested in a brief 15-minute discovery call to discuss your specific challenges and how we might help? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="discoveryCall" value="Yes" required> Yes - I'd like to schedule a call</label>
+            <label><input type="radio" name="discoveryCall" value="Maybe"> Maybe - contact me with more information first</label>
+            <label><input type="radio" name="discoveryCall" value="No"> Not at this time</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>11. Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
+        <div class="radio-group">
+            <label><input type="radio" name="betaTester" value="Yes" required> Yes - I'd like to explore this opportunity</label>
+            <label><input type="radio" name="betaTester" value="Tell me more"> Tell me more about what this involves</label>
+            <label><input type="radio" name="betaTester" value="Not interested"> Not interested right now</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>12. Contact Information (Optional but helpful for follow-up)</label>
+
+        <label style="margin-top: 15px;">Name:</label>
+        <input type="text" name="name" id="contactName" placeholder="Your full name">
+
+        <label style="margin-top: 15px;">Facility Name:</label>
+        <input type="text" name="facilityName" id="facilityName" placeholder="Your facility name">
+
+        <label style="margin-top: 15px;">Email:</label>
+        <input type="email" name="email" id="contactEmail" placeholder="your.email@example.com">
+
+        <label style="margin-top: 15px;">Phone:</label>
+        <input type="tel" name="phone" id="contactPhone" placeholder="(555) 123-4567">
+
+        <label style="margin-top: 15px;">Best time to reach you:</label>
+        <input type="text" name="bestTime" id="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
+    </div>
+
+    <div class="form-group">
+        <label>13. Any additional comments or challenges we should know about?</label>
+        <textarea name="comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
     </div>
 </div>
-
-                    <div class="form-group">
-                        <label>6. How much time does your staff spend on manual inventory tracking per week? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="timeOnInventory" value="Less than 5" required> Less than 5 hours</label>
-                            <label><input type="radio" name="timeOnInventory" value="5-10"> 5-10 hours</label>
-                            <label><input type="radio" name="timeOnInventory" value="10-20"> 10-20 hours</label>
-                            <label><input type="radio" name="timeOnInventory" value="20+"> More than 20 hours</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section C: Solution Interest -->
-                <div class="form-section">
-                    <h4>Section C: Solution Interest</h4>
-
-                    <div class="form-group">
-                        <label>7. Which solution would be MORE valuable to your facility? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="solutionPreference" value="Financing" required> 90-Day Financing Terms for Medical Supplies</label>
-                            <label><input type="radio" name="solutionPreference" value="RFID Software"> RFID-Based Warehouse Management Software</label>
-                            <label><input type="radio" name="solutionPreference" value="Both equally"> Both are equally important</label>
-                            <label><input type="radio" name="solutionPreference" value="Neither"> Neither addresses our main concerns</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>8. For the 90-day financing option: What percentage fee would you consider reasonable to access extended payment terms? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="financingFee" value="Up to 3%" required> Up to 3% of order value</label>
-                            <label><input type="radio" name="financingFee" value="4-6%"> 4-6% of order value</label>
-                            <label><input type="radio" name="financingFee" value="7-9%"> 7-9% of order value</label>
-                            <label><input type="radio" name="financingFee" value="10%+"> 10%+ would still be worth it</label>
-                            <label><input type="radio" name="financingFee" value="Not interested"> Not interested in financing</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>9. For the warehouse management software: What would you consider a fair monthly cost for a system that automates inventory tracking, forecasting, and ordering? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="softwareCost" value="Under $200" required> Under $200/month</label>
-                            <label><input type="radio" name="softwareCost" value="$200-$500"> $200-$500/month</label>
-                            <label><input type="radio" name="softwareCost" value="$500-$1000"> $500-$1,000/month</label>
-                            <label><input type="radio" name="softwareCost" value="$1000-$2000"> $1,000-$2,000/month</label>
-                            <label><input type="radio" name="softwareCost" value="$2000+"> $2,000+/month</label>
-                            <label><input type="radio" name="softwareCost" value="Depends"> Would depend on facility size and features</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Section D: Next Steps -->
-                <div class="form-section">
-                    <h4>Section D: Next Steps</h4>
-
-                    <div class="form-group">
-                        <label>10. Would you be interested in a brief 15-minute discovery call to discuss your specific challenges and how we might help? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="discoveryCall" value="Yes" required> Yes - I'd like to schedule a call</label>
-                            <label><input type="radio" name="discoveryCall" value="Maybe"> Maybe - contact me with more information first</label>
-                            <label><input type="radio" name="discoveryCall" value="No"> Not at this time</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>11. Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
-                        <div class="radio-group">
-                            <label><input type="radio" name="betaTester" value="Yes" required> Yes - I'd like to explore this opportunity</label>
-                            <label><input type="radio" name="betaTester" value="Tell me more"> Tell me more about what this involves</label>
-                            <label><input type="radio" name="betaTester" value="Not interested"> Not interested right now</label>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>12. Contact Information (Optional but helpful for follow-up)</label>
-
-                        <label style="margin-top: 15px;">Name:</label>
-                        <input type="text" name="name" id="contactName" placeholder="Your full name">
-
-                        <label style="margin-top: 15px;">Facility Name:</label>
-                        <input type="text" name="facilityName" id="facilityName" placeholder="Your facility name">
-
-                        <label style="margin-top: 15px;">Email:</label>
-                        <input type="email" name="email" id="contactEmail" placeholder="your.email@example.com">
-
-                        <label style="margin-top: 15px;">Phone:</label>
-                        <input type="tel" name="phone" id="contactPhone" placeholder="(555) 123-4567">
-
-                        <label style="margin-top: 15px;">Best time to reach you:</label>
-                        <input type="text" name="bestTime" id="bestTime" placeholder="e.g., Weekday mornings, Tuesday afternoons">
-                    </div>
-
-                    <div class="form-group">
-                        <label>13. Any additional comments or challenges we should know about?</label>
-                        <textarea name="comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
-                    </div>
-                </div>
 
                 <button type="submit" class="submit-button" id="submitBtn">Submit Survey</button>
             </form>
