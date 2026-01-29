@@ -1,845 +1,1183 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Healthcare Supply Chain Solutions Survey - Win $1,000">
-    <title>Healthcare Supply Chain Survey - Win $1,000</title>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
+<meta charset="UTF-8">
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #2c7a9e 0%, #1e5a7a 100%);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+<meta name="description" content="Healthcare Supply Chain Solutions Survey - Win $1,000">
 
+<title>Healthcare Supply Chain Survey - Win $1,000</title>
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, #2c7a9e 0%, #1e5a7a 100%);
+        color: white;
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero .raffle-badge {
+        background: #28a745;
+        display: inline-block;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 20px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+        opacity: 0.95;
+    }
+
+    .value-props {
+        max-width: 800px;
+        margin: 30px auto 20px;
+        text-align: left;
+        background: rgba(255,255,255,0.1);
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    .value-props p {
+        font-size: 1.1em;
+        margin: 15px 0;
+        padding-left: 10px;
+    }
+
+    .value-props strong {
+        font-size: 1.15em;
+    }
+
+    /* Section Styles */
+    section {
+        padding: 60px 20px;
+    }
+
+    .section-white {
+        background-color: white;
+    }
+
+    .section-gray {
+        background-color: #f8f9fa;
+    }
+
+    h2 {
+        font-size: 2.2em;
+        color: #2c7a9e;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* Pain Points Grid */
+    .pain-points {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .pain-point {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        border-left: 4px solid #28a745;
+    }
+
+    .pain-point h4 {
+        font-size: 1.3em;
+        color: #2c7a9e;
+        margin-bottom: 10px;
+    }
+
+    .pain-point p {
+        color: #555;
+        font-style: italic;
+        font-size: 0.95em;
+    }
+
+    /* Form Styles */
+    .survey-form {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        margin-top: 30px;
+    }
+
+    .form-section {
+        margin-bottom: 40px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid #e9ecef;
+    }
+
+    .form-section:last-of-type {
+        border-bottom: none;
+    }
+
+    .form-section h4 {
+        font-size: 1.4em;
+        color: #2c7a9e;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #28a745;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    .form-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: #333;
+         font-size: 1.05em;
+    }
+
+    .radio-group {
+        margin-left: 10px;
+    }
+
+    .radio-group label {
+        font-weight: normal;
+        display: block;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .radio-group input {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1em;
+        font-family: inherit;
+    }
+
+    select {
+        cursor: pointer;
+    }
+
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #2c7a9e;
+        box-shadow: 0 0 0 3px rgba(44, 122, 158, 0.1);
+    }
+
+    .submit-button, .cta-button {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 50px;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        display: block;
+        margin: 30px auto 0;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .submit-button:hover, .cta-button:hover {
+        background-color: #218838;
+    }
+
+    .submit-button:disabled {
+        background-color: #6c757d;
+        cursor: not-allowed;
+    }
+
+    /* Step Indicator */
+    .step-indicator {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
+    .step {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .step-number {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: #ddd;
+        color: #666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+
+    .step.active .step-number {
+        background: #28a745;
+        color: white;
+    }
+
+    .step.completed .step-number {
+        background: #2c7a9e;
+        color: white;
+    }
+
+    /* Hide/Show sections */
+    .hidden {
+        display: none;
+    }
+
+    /* Thank You Section */
+    .thank-you {
+        background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+        color: white;
+        text-align: center;
+        display: none;
+        padding: 60px 20px;
+    }
+
+    .thank-you.show {
+        display: block;
+    }
+
+    .thank-you h2 {
+        color: white;
+     }
+
+    .next-steps {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        border-radius: 8px;
+        margin: 30px auto;
+        max-width: 600px;
+        text-align: left;
+    }
+
+    .next-steps ul {
+        list-style: none;
+        margin: 20px 0;
+    }
+
+    .next-steps ul li {
+        padding: 10px 0;
+        padding-left: 30px;
+        position: relative;
+    }
+
+    .next-steps ul li:before {
+        content: "✓";
+        font-weight: bold;
+        position: absolute;
+        left: 0;
+        font-size: 1.3em;
+    }
+
+    /* Referral Section */
+    .referral-section {
+        background: white;
+        padding: 40px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .referral-section h3 {
+        color: #2c7a9e;
+        margin-bottom: 20px;
+    }
+
+    .referral-bonus-box {
+        background: #e7f3ff;
+        border-left: 4px solid #2c7a9e;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 5px;
+    }
+
+    .referral-bonus-box ul {
+        list-style: none;
+        margin: 15px 0;
+    }
+
+    .referral-bonus-box ul li {
+        padding: 8px 0;
+        padding-left: 25px;
+        position: relative;
+    }
+
+    .referral-bonus-box ul li:before {
+        content: "🎯";
+        position: absolute;
+        left: 0;
+    }
+
+    .entry-counter {
+        background: #28a745;
+        color: white;
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px 0;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #1e5a7a;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    footer h3 {
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        margin-bottom: 20px;
+        opacity: 0.9;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
         .hero h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            line-height: 1.2;
+            font-size: 1.8em;
         }
-
-        .hero .raffle-badge {
-            background: #28a745;
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-size: 1.3em;
-            font-weight: bold;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
-
         .hero p {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            opacity: 0.95;
-        }
-
-        /* Section Styles */
-        section {
-            padding: 60px 20px;
-        }
-
-        .section-white {
-            background-color: white;
-        }
-
-        .section-gray {
-            background-color: #f8f9fa;
-        }
-
-        h2 {
-            font-size: 2.2em;
-            color: #2c7a9e;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        /* Pain Points Grid */
-        .pain-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .pain-point {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-left: 4px solid #28a745;
-        }
-
-        .pain-point h4 {
-            font-size: 1.3em;
-            color: #2c7a9e;
-            margin-bottom: 10px;
-        }
-
-        .pain-point p {
-            color: #555;
-        }
-
-        /* Form Styles */
-        .survey-form {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-top: 30px;
-        }
-
-        .form-section {
-            margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 2px solid #e9ecef;
-        }
-
-        .form-section:last-of-type {
-            border-bottom: none;
-        }
-
-        .form-section h4 {
-            font-size: 1.4em;
-            color: #2c7a9e;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #28a745;
-        }
-
-        .form-group {
-            margin-bottom: 25px;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 12px;
-            color: #333;
-             font-size: 1.05em;
-        }
-
-        .radio-group {
-            margin-left: 10px;
-        }
-
-        .radio-group label {
-            font-weight: normal;
-            display: block;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .radio-group input {
-            margin-right: 10px;
-            cursor: pointer;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select,
-        textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
             font-size: 1em;
-            font-family: inherit;
         }
-
-        select {
-            cursor: pointer;
+        h2 {
+            font-size: 1.8em;
         }
-
-        textarea {
-            min-height: 100px;
-            resize: vertical;
+        .survey-form {
+            padding: 25px 20px;
         }
-
-        input:focus, select:focus, textarea:focus {
-            outline: none;
-            border-color: #2c7a9e;
-            box-shadow: 0 0 0 3px rgba(44, 122, 158, 0.1);
-        }
-
-        .submit-button, .cta-button {
-            background-color: #28a745;
-            color: white;
-            padding: 15px 50px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            display: block;
-            margin: 30px auto 0;
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .submit-button:hover, .cta-button:hover {
-            background-color: #218838;
-        }
-
-        .submit-button:disabled {
-            background-color: #6c757d;
-            cursor: not-allowed;
-        }
-
-        /* Step Indicator */
         .step-indicator {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            gap: 20px;
-        }
-
-        .step {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .step-number {
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background: #ddd;
-            color: #666;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-
-        .step.active .step-number {
-            background: #28a745;
-            color: white;
-        }
-
-        .step.completed .step-number {
-            background: #2c7a9e;
-            color: white;
-        }
-
-        /* Hide/Show sections */
-        .hidden {
-            display: none;
-        }
-
-        /* Thank You Section */
-        .thank-you {
-            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
-            color: white;
-            text-align: center;
-            display: none;
-            padding: 60px 20px;
-        }
-
-        .thank-you.show {
-            display: block;
-        }
-
-        .thank-you h2 {
-            color: white;
-         }
-
-        .next-steps {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px auto;
-            max-width: 600px;
-            text-align: left;
-        }
-
-        .next-steps ul {
-            list-style: none;
-            margin: 20px 0;
-        }
-
-        .next-steps ul li {
-            padding: 10px 0;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .next-steps ul li:before {
-            content: "✓";
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-            font-size: 1.3em;
-        }
-
-        /* Referral Section */
-        .referral-section {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .referral-section h3 {
-            color: #2c7a9e;
-            margin-bottom: 20px;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #1e5a7a;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        footer h3 {
-            color: white;
-            margin-bottom: 10px;
-        }
-
-        footer p {
-            margin-bottom: 20px;
-            opacity: 0.9;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 1.8em;
-            }
-            .hero p {
-                font-size: 1em;
-            }
-            h2 {
-                font-size: 1.8em;
-            }
-            .survey-form {
-                padding: 25px 20px;
-            }
-            .step-indicator {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-         }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .intro-text {
-            max-width: 800px;
-            margin: 0 auto 30px;
-            text-align: center;
-            font-size: 1.1em;
-            color: #555;
-        }
-
-        /* Checkbox styling */
-        .terms-checkbox {
-            display: flex;
+            flex-direction: column;
             align-items: flex-start;
-            gap: 10px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            margin: 20px 0;
         }
+     }
 
-        .terms-checkbox input[type="checkbox"] {
-            margin-top: 5px;
-            cursor: pointer;
-            width: 20px;
-            height: 20px;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
-        .terms-checkbox label {
-            font-size: 0.95em;
-            line-height: 1.6;
-            cursor: pointer;
-        }
+    .intro-text {
+        max-width: 800px;
+        margin: 0 auto 30px;
+        text-align: center;
+        font-size: 1.1em;
+         color: #555;
+    }
 
-         .warning-box {
-            background: #fff3cd;
-            padding: 20px;
-            border-left: 4px solid #ffc107;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
+    /* Checkbox styling */
+    .terms-checkbox {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        margin: 20px 0;
+    }
 
-        .warning-box p {
-            margin: 0;
-            color: #856404;
-        }
+    .terms-checkbox input[type="checkbox"] {
+        margin-top: 5px;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+    }
 
-        .warning-box p strong {
-            font-weight: bold;
-        }
+    .terms-checkbox label {
+        font-size: 0.95em;
+        line-height: 1.6;
+        cursor: pointer;
+    }
 
-        .success-box {
-            background: #d4edda;
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 4px solid #28a745;
-            margin-top: 20px;
-        }
+     .warning-box {
+        background: #fff3cd;
+        padding: 20px;
+        border-left: 4px solid #ffc107;
+        border-radius: 5px;
+        margin: 20px 0;
+    }
 
-        .success-box h4 {
-            color: #155724;
-            margin-top: 0;
-        }
+    .warning-box p {
+        margin: 0;
+        color: #856404;
+    }
 
-        .success-box p {
-            color: #155724;
-        }
-    </style>
+    .warning-box p strong {
+        font-weight: bold;
+    }
+
+    .success-box {
+        background: #d4edda;
+        padding: 30px;
+        border-radius: 8px;
+        border-left: 4px solid #28a745;
+        margin-top: 20px;
+    }
+
+    .success-box h4 {
+        color: #155724;
+        margin-top: 0;
+    }
+
+    .success-box p {
+        color: #155724;
+    }
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Struggling with Cash Flow and Inventory Management?</h1>
-            <div class="raffle-badge">🎉 WIN $1,000 🎉</div>
-            <p>Share Your Challenges in Our 3-Minute Survey</p>
-            <p style="font-size: 1em;">Plus: Refer a colleague for a chance at an additional $500 bonus!</p>
-            <a href="#survey" class="cta-button">Start Survey & Enter to Win</a>
+<!-- Hero Section -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <h1>Healthcare Supply Chain Solutions Built For Your Success</h1>
+
+        <div class="raffle-badge">🎉 Share Your Input & Win $1,000 🎉</div>
+
+        <p>Take Our 3-Minute Survey & Enter to Win</p>
+
+        <div class="value-props">
+            <p>💰  <strong>Easing Your Financial Burden</strong> - Flexible payment terms that match your reimbursement schedule</p>
+            <p>📦 <strong>Bringing Clarity to Your Supply Room</strong> - Virtual warehouse management that saves time and reduces waste</p>
         </div>
-    </section>
 
-    <!-- Survey Section -->
-    <section id="survey" class="section-gray">
-        <div class="container">
-            <h2>Help Us Build Solutions for YOU</h2>
-            <p class="intro-text">
-                Before we invest in technology and financing programs, we want to hear directly from professionals like you who live these challenges every day.
-            </p>
+        <a href="#survey" class="cta-button">Start Survey & Enter to Win</a>
 
-            <div class="survey-form">
-                <!-- Step Indicator -->
-                <div class="step-indicator">
-                    <div class="step active" id="step1">
-                        <div class="step-number">1</div>
-                        <span>Facility & Role</span>
-                    </div>
-                    <div class="step" id="step2">
-                        <div class="step-number">2</div>
-                        <span>Your Challenges</span>
-                    </div>
-                    <div class="step" id="step3">
-                        <div class="step-number">3</div>
-                        <span>Contact Info</span>
-                    </div>
+    </div>
+
+</section>
+
+<!-- Survey Section -->
+
+<section id="survey" class="section-gray">
+
+    <div class="container">
+
+        <h2>Help Us Build Solutions for YOU</h2>
+
+        <p class="intro-text">
+            Before we invest in technology and financing programs, we want to hear directly from professionals like you who live these challenges every day.
+        </p>
+
+        <div class="survey-form">
+
+            <!-- Step Indicator -->
+
+            <div class="step-indicator">
+
+                <div class="step active" id="step1">
+
+                    <div class="step-number">1</div>
+
+                    <span>Facility & Role</span>
+
                 </div>
 
-                 <form id="surveyForm">
-                    
-                    <!-- STEP 1: Facility Type & Role -->
-                    <div id="page1" class="form-page">
-                        <div class="form-section">
-                            <h4>Tell Us About Your Facility</h4>
-                            
-                            <div class="form-group">
-                                <label>1. What type of healthcare facility do you work for? *</label>
-                                <select name="facilityType" id="facilityType" required>
-                                    <option value="">-- Select Facility Type --</option>
-                                    <option value="Nursing Home">Nursing Home</option>
-                                    <option value="Hospital">Hospital</option>
-                                    <option value="Doctor Office">Doctor Office / Medical Practice</option>
-                                    <option value="Pharmacy">Pharmacy</option>
-                                     <option value="EMS">EMS Company</option>
-                                    <option value="Lab">Laboratory</option>
-                                </select>
-                            </div>
+                <div class="step" id="step2">
 
-                            <div class="form-group">
-                                <label>2. What is your role? *</label>
-                                <select name="role" id="role" required>
-                                    <option value="">-- Select Your Role --</option>
-                                    <option value="Finance">Finance Team</option>
-                                    <option value="Operations">Operations Team</option>
-                                    <option value="C-Suite">C-Suite / Executive (Overseeing Both)</option>
-                                </select>
-                            </div>
+                    <div class="step-number">2</div>
 
-                            <button type="button" class="submit-button" onclick="nextPage()">Continue to Survey →</button>
-                        </div>
-                    </div>
+                    <span>Your Challenges</span>
 
-                    <!-- STEP 2: Dynamic Questions -->
-                    <div id="page2" class="form-page hidden">
-                        
-                        <!-- Pain Points Section (Dynamic) -->
-                        <div class="form-section">
-                            <h4 id="challengeHeader">Current Challenges</h4>
-                            <div id="painPointsDisplay"></div>
-                        </div>
+                </div>
 
-                        <!-- Facility Size Question (Dynamic) -->
-                        <div class="form-section" id="facilitySizeSection">
-                            <div class="form-group">
-                                <label id="sizeLabel">3. What is the size of your facility? *</label>
-                                <div class="radio-group" id="sizeOptions">
-                                    <!-- Dynamically populated -->
-                                </div>
-                            </div>
-                        </div>
+                <div class="step" id="step3">
 
-                        <!-- Finance Questions -->
-                        <div id="financeQuestions" class="form-section hidden">
-                            <h4>Cash Flow & Financing</h4>
-                             
-                            <div class="form-group">
-                                <label>How would you rate your current challenges with cash flow and supplier payment terms? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="cashFlowChallenge" value="Major problem"> Major problem - we struggle regularly</label>
-                                    <label><input type="radio" name="cashFlowChallenge" value="Moderate issue"> Moderate issue - it's manageable but stressful</label>
-                                    <label><input type="radio" name="cashFlowChallenge" value="Minor concern"> Minor concern - occasional issues</label>
-                                    <label><input type="radio" name="cashFlowChallenge" value="Not a problem"> Not a problem for us</label>
-                                </div>
-                            </div>
+                    <div class="step-number">3</div>
 
-                            <div class="form-group">
-                                <label>For 90-day financing: What percentage fee would you consider reasonable? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="financing_fee" value="Up to 3%"> Up to 3% of order value</label>
-                                    <label><input type="radio" name="financing_fee" value="4-6%"> 4-6% of order value</label>
-                                    <label><input type="radio" name="financing_fee" value="7-9%"> 7-9% of order value</label>
-                                    <label><input type="radio" name="financing_fee" value="10%+"> 10%+ would still be worth it</label>
-                                    <label><input type="radio" name="financing_fee" value="Not interested"> Not interested in financing</label>
-                                </div>
-                            </div>
-                        </div>
+                    <span>Contact Info</span>
 
-                        <!-- Operations Questions -->
-                        <div id="operationsQuestions" class="form-section hidden">
-                            <h4>Inventory & Operations</h4>
-                            
-                            <div class="form-group">
-                                <label>How would you rate your current challenges with inventory management? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="inventoryChallenge" value="Major problem"> Major problem - manual, time-consuming, error-prone</label>
-                                    <label><input type="radio" name="inventoryChallenge" value="Moderate issue"> Moderate issue - we manage but it's inefficient</label>
-                                    <label><input type="radio" name="inventoryChallenge" value="Minor concern"> Minor concern - could be better</label>
-                                    <label><input type="radio" name="inventoryChallenge" value="Not a problem"> Not a problem - we have a good system</label>
-                                </div>
-                            </div>
+                </div>
 
-                            <div class="form-group">
-                                <label>How much time does your staff spend on manual inventory tracking per week? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="timeOnInventory" value="Less than 5 hours"> Less than 5 hours</label>
-                                    <label><input type="radio" name="timeOnInventory" value="5-10 hours"> 5-10 hours</label>
-                                    <label><input type="radio" name="timeOnInventory" value="10-20 hours"> 10-20 hours</label>
-                                    <label><input type="radio" name="timeOnInventory" value="More than 20 hours"> More than 20 hours</label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>For warehouse management software: What monthly cost would be fair? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="softwareCost" value="Under $200/month"> Under $200/month</label>
-                                    <label><input type="radio" name="softwareCost" value="$200-$500/month"> $200-$500/month</label>
-                                     <label><input type="radio" name="softwareCost" value="$500-$1000/month"> $500-$1,000/month</label>
-                                    <label><input type="radio" name="softwareCost" value="$1000-$2000/month"> $1,000-$2,000/month</label>
-                                    <label><input type="radio" name="softwareCost" value="$2000+/month"> $2,000+/month</label>
-                                    <label><input type="radio" name="softwareCost" value="Depends on size"> Would depend on facility size and features</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Solution Preference & Next Steps (All Roles) -->
-                        <div class="form-section">
-                            <h4>Solution Interest & Next Steps</h4>
-                            
-                            <div class="form-group">
-                                <label>Which solution would be MORE valuable to your facility? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="solutionPreference" value="90-Day Financing Terms" required> 90-Day Financing Terms for Medical Supplies</label>
-                                    <label><input type="radio" name="solutionPreference" value="RFID Warehouse Software"> RFID-Based Warehouse Management Software</label>
-                                    <label><input type="radio" name="solutionPreference" value="Both equally important"> Both are equally important</label>
-                                    <label><input type="radio" name="solutionPreference" value="Neither"> Neither addresses our main concerns</label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Would you be interested in a brief discovery call to discuss how these solutions could specifically benefit your facility? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="discoveryCall" value="Yes - Schedule call" required> Yes, I'd like to schedule a call</label>
-                                    <label><input type="radio" name="discoveryCall" value="Maybe - More info"> Maybe – send me more information first</label>
-                                    <label><input type="radio" name="discoveryCall" value="Not at this time"> Not at this time</label>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
-                                <div class="radio-group">
-                                    <label><input type="radio" name="betaTester" value="Yes" required> Yes - I'd like to explore this opportunity</label>
-                                    <label><input type="radio" name="betaTester" value="Tell me more"> Tell me more about what this involves</label>
-                                    <label><input type="radio" name="betaTester" value="Not interested"> Not interested right now</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <button type="button" class="submit-button" onclick="nextToContact()">Continue to Contact Info →</button>
-                    </div>
-
-                    <!-- STEP 3: Contact Info & Terms -->
-                    <div id="page3" class="form-page hidden">
-                        <div class="form-section">
-                            <h4>Contact Information</h4>
-
-                            <div class="form-group">
-                                <label>Name: *</label>
-                                <input type="text" name="name" id="contactName" placeholder="Your full name" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Facility Name:</label>
-                                <input type="text" name="facilityName" id="facilityName" placeholder="Your facility name">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Email: *</label>
-                                <input type="email" name="email" id="contactEmail" placeholder="your.email@example.com" required>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Phone:</label>
-                                <input type="tel" name="phone" id="contactPhone" placeholder="123-456-7890">
-                            </div>
-
-                            <div class="form-group">
-                                <label>Any additional comments or challenges we should know about?</label>
-                                <textarea name="comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
-                            </div>
-                        </div>
-
-                        <!-- Raffle Terms -->
-                        <div class="form-section">
-                            <h4>🎉 Contest Entry</h4>
-                            <div class="terms-checkbox">
-                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
-                                <label for="agreeTerms">
-                                    <strong>I agree to the contest terms:</strong> One entry per person. Winner will be randomly selected on <strong>July 1st, 2026</strong> and notified via email. Must respond within 7 days to claim prize. $1,000 prize awarded to winner; if winner also referred someone who completed this survey, total prize is $1,500. Company employees and immediate family members not eligible. No purchase necessary; void where prohibited. Prize paid via check or digital payment within 10 business days. By submitting, I consent to being contacted about survey results and solutions.
-                                </label>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="submit-button" id="submitBtn">Submit Survey & Enter Raffle</button>
-                    </div>
-
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Thank You Section -->
-    <section class="thank-you" id="thankYouSection">
-        <div class="container">
-            <h2>Thank You for Your Valuable Input!  🙏</h2>
-            <p style="font-size: 1.2em;">You're now entered to win $1,000 (or $1,500 with referral bonus)!</p>
-
-            <div class="next-steps">
-                <p><strong>What happens next:</strong></p>
-                <ul>
-                    <li>We'll review your responses carefully</li>
-                    <li>Winner will be announced July 1st, 2026</li>
-                    <li>We'll keep you updated on our progress</li>
-                    <li>Early participants get exclusive access to beta pricing</li>
-                </ul>
             </div>
 
-            <!-- Referral Section -->
-            <div class="referral-section">
-                <h3>Know Someone Else Facing These Challenges?</h3>
-                <p><strong>Refer a colleague and you BOTH benefit:</strong></p>
-                <ul style="list-style: none; margin: 20px 0;">
-                    <li>✓ They get entered into the $1,000 raffle</li>
-                    <li>✓ If YOU win, you get an additional $500 bonus ($1,500 total!)</li>
-                    <li>✓ You help us reach more professionals and build better solutions</li>
-                </ul>
+             <form id="surveyForm">
 
-                <form id="referralForm" style="margin-top: 30px;">
-                    <div class="form-group">
-                        <label>Their Name: *</label>
-                        <input type="text" name="refereeName" id="refereeName" placeholder="Colleague's full name" required>
-                    </div>
+                <!-- STEP 1: Facility Type & Role -->
 
-                    <div class="form-group">
-                        <label>Their Email: *</label>
-                        <input type="email" name="refereeEmail" id="refereeEmail" placeholder="colleague@example.com" required>
-                    </div>
+                <div id="page1" class="form-page">
 
-                    <div class="form-group">
-                        <label>Their Facility Name (Optional):</label>
-                        <input type="text" name="refereeFacility" id="refereeFacility" placeholder="e.g., Their hospital or facility name">
-                    </div>
+                    <div class="form-section">
 
-                    <div class="form-group">
-                        <label>Their Position:</label>
-                        <input type="text" name="refereePosition" id="refereePosition" placeholder="e.g., CFO, Director of Operations">
-                    </div>
+                        <h4>Tell Us About Your Facility</h4>
 
-                    <div class="form-group">
-                        <label>Personal Message to Send Them: *</label>
-                        <div style="margin-bottom: 15px;">
-                            <label style="font-weight: normal; display: block; margin-bottom: 10px;">
-                                <input type="radio" name="messageType" value="template" id="useTemplate" checked onchange="toggleMessageType()"> 
-                                Use a template (you can edit it)
-                            </label>
-                            <label style="font-weight: normal; display: block;">
-                                <input type="radio" name="messageType" value="custom" id="useCustom" onchange="toggleMessageType()"> 
-                                Write my own message
-                            </label>
-                        </div>
+                        <div class="form-group">
 
-                        <div id="templateSelector" style="margin-bottom: 15px;">
-                            <label>Choose a template:</label>
-                            <select id="messageTemplate" onchange="loadTemplate()" style="margin-bottom: 10px;">
-                                <option value="template1">Template 1: Friendly & Professional</option>
-                                <option value="template2">Template 2: Direct & Quick</option>
-                                <option value="template3">Template 3: Emphasize Raffle</option>
+                            <label>1. What type of healthcare facility do you work for? *</label>
+
+                            <select name="facilityType" id="facilityType" required>
+
+                                <option value="">-- Select Facility Type --</option>
+
+                                <option value="Nursing Home">Nursing Home</option>
+
+                                <option value="Hospital">Hospital</option>
+
+                                <option value="Doctor Office">Doctor Office / Medical Practice</option>
+
+                                <option value="Pharmacy">Pharmacy</option>
+
+                                 <option value="EMS">EMS Company</option>
+
+                                <option value="Lab">Laboratory</option>
+
                             </select>
+
                         </div>
 
-                        <textarea name="personalMessage" id="personalMessage" rows="6" required style="font-family: inherit;"></textarea>
-                        <p style="font-size: 0.9em; color: #666; margin-top: 5px;">This  message will be included in the email they receive with the survey link.</p>
+                        <div class="form-group">
+
+                            <label>2. What is your role? *</label>
+
+                            <select name="role" id="role" required>
+
+                                <option value="">-- Select Your Role --</option>
+
+                                <option value="Finance">Finance Team</option>
+
+                                <option value="Operations">Operations Team</option>
+
+                                <option value="C-Suite">C-Suite / Executive (Overseeing Both)</option>
+
+                            </select>
+
+                        </div>
+
+                        <button type="button" class="submit-button" onclick="nextPage()">Continue to Survey →</button>
+
                     </div>
 
-                    <div class="warning-box">
-                        <p style="font-weight: bold;">⚠️ IMPORTANT - After Submitting:</p>
-                        <p style="margin-top: 10px;">
-                            <strong>Please also call or text the person you're referring</strong> to let them know:<br>
-                            💬 "Watch for an email from me with a quick survey - <strong>check your spam folder</strong> if you don't see it!"
-                        </p>
-                    </div>
-
-                    <button type="submit" class="submit-button">Send Referral</button>
-                    <button type="button" class="submit-button" style="background: #6c757d; margin-top: 10px;" onclick="skipReferral()">Skip - No Referral</button>
-                </form>
-
-                <!-- Success message (hidden by default) -->
-                <div id="referralSuccess" class="success-box" style="display: none;">
-                    <h4>✅ Referral Submitted!</h4>
-                    <p style="margin: 15px 0;">
-                        We'll send <strong id="refereeNameDisplay"></strong> an email with your personal message and the survey link.
-                    </p>
-                    
-                    <div class="warning-box" style="margin-top: 20px;">
-                        <p style="font-weight: bold; font-size: 1.1em;">📞 NEXT STEP - Don't forget!</p>
-                        <p style="margin-top: 10px; font-size: 1.05em;">
-                            <strong>Call or text <span id="refereeNameDisplay2"></span> now</strong> to let them know:<br><br>
-                            💬 <em>"I just sent you an email about a quick healthcare survey. You'll get it from <strong>surveybms2026@gmail.com</strong>. <strong>Check your spam folder</strong> if you don't see it! Takes 3 minutes and you could win $1,000!"</em>
-                        </p>
-                    </div>
-
-                    <button type="button" class="submit-button" style="margin-top: 20px;" onclick="addAnotherReferral()">Refer Another Colleague</button>
                 </div>
+
+                <!-- STEP 2: Dynamic Questions -->
+
+                <div id="page2" class="form-page hidden">
+
+                    <!-- Pain Points Section (Dynamic) -->
+
+                    <div class="form-section">
+
+                        <h4>Our Solutions for Your Challenges</h4>
+
+                        <div id="painPointsDisplay"></div>
+
+                    </div>
+
+                    <!-- Facility Size Question (Dynamic) -->
+
+                    <div class="form-section" id="facilitySizeSection">
+
+                        <div class="form-group">
+
+                            <label id="sizeLabel">3. What is the size of your facility? *</label>
+
+                            <div class="radio-group" id="sizeOptions">
+
+                                <!-- Dynamically populated -->
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Finance Questions -->
+
+                    <div id="financeQuestions" class="form-section hidden">
+
+                        <h4>Cash Flow & Financing</h4>
+
+                        <div class="form-group">
+
+                            <label>How would you rate your current challenges with cash flow and supplier payment terms? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="cashFlowChallenge" value="Major problem"> Major problem - we struggle regularly</label>
+
+                                <label><input type="radio" name="cashFlowChallenge" value="Moderate issue"> Moderate issue - it's manageable but stressful</label>
+
+                                <label><input type="radio" name="cashFlowChallenge" value="Minor concern"> Minor concern - occasional issues</label>
+
+                                <label><input type="radio" name="cashFlowChallenge" value="Not a problem"> Not a problem for us</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>For 90-day financing: What percentage fee would you consider reasonable? *</label>
+
+                             <div class="radio-group">
+
+                                <label><input type="radio" name="financing_fee" value="Up to 3%"> Up to 3% of order value</label>
+
+                                <label><input type="radio" name="financing_fee" value="4-6%"> 4-6% of order value</label>
+
+                                <label><input type="radio" name="financing_fee" value="7-9%"> 7-9% of order value</label>
+
+                                <label><input type="radio" name="financing_fee" value="10%+"> 10%+ would still be worth it</label>
+
+                                <label><input type="radio" name="financing_fee" value="Not interested"> Not interested in financing</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Operations Questions -->
+
+                    <div id="operationsQuestions" class="form-section hidden">
+
+                        <h4>Inventory & Operations</h4>
+
+                        <div class="form-group">
+
+                            <label>How would you rate your current challenges with inventory management? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="inventoryChallenge" value="Major problem"> Major problem - manual, time-consuming, error-prone</label>
+
+                                <label><input type="radio" name="inventoryChallenge" value="Moderate issue"> Moderate issue - we manage but it's inefficient</label>
+
+                                <label><input type="radio" name="inventoryChallenge" value="Minor concern"> Minor concern - could be better</label>
+
+                                <label><input type="radio" name="inventoryChallenge" value="Not a problem"> Not a problem - we have a good system</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>How much time does your staff spend on manual inventory tracking per week? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="timeOnInventory" value="Less than 5 hours"> Less than 5 hours</label>
+
+                                <label><input type="radio" name="timeOnInventory" value="5-10 hours"> 5-10 hours</label>
+
+                                <label><input type="radio" name="timeOnInventory" value="10-20 hours"> 10-20 hours</label>
+
+                                <label><input type="radio" name="timeOnInventory" value="More than 20 hours"> More than 20 hours</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>For warehouse management software: What monthly cost would be fair? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="softwareCost" value="Under $200/month"> Under $200/month</label>
+
+                                <label><input type="radio" name="softwareCost" value="$200-$500/month"> $200-$500/month</label>
+
+                                 <label><input type="radio" name="softwareCost" value="$500-$1000/month"> $500-$1,000/month</label>
+
+                                <label><input type="radio" name="softwareCost" value="$1000-$2000/month"> $1,000-$2,000/month</label>
+
+                                <label><input type="radio" name="softwareCost" value="$2000+/month"> $2,000+/month</label>
+
+                                <label><input type="radio" name="softwareCost" value="Depends on size"> Would depend on facility size and features</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Solution Preference (C-Suite Only) -->
+
+                    <div class="form-section" id="solutionPreferenceSection">
+
+                        <h4>Solution Interest & Next Steps</h4>
+
+                        <div class="form-group">
+
+                            <label>If you could only choose ONE, which would have the biggest impact on your facility? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="solutionPreference" value="90-Day Financing Terms" required> 90-Day Financing Terms for Medical Supplies</label>
+
+                                <label><input type="radio" name="solutionPreference" value="RFID Warehouse Software"> RFID-Based Warehouse Management Software</label>
+
+                                <label><input type="radio" name="solutionPreference" value="Both equally important"> Both are equally important</label>
+
+                                <label><input type="radio" name="solutionPreference" value="Neither"> Neither addresses our main concerns</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Would you be interested in a brief discovery call to discuss how these solutions could specifically benefit your facility? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="discoveryCall" value="Yes - Schedule call" required> Yes, I'd like to schedule a call</label>
+
+                                <label><input type="radio" name="discoveryCall" value="Maybe - More info"> Maybe – send me more information first</label>
+
+                                <label><input type="radio" name="discoveryCall" value="Not at this time"> Not at this time</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Would you be interested in being an early partner/beta tester to help shape these solutions? *</label>
+
+                            <div class="radio-group">
+
+                                <label><input type="radio" name="betaTester" value="Yes" required> Yes - I'd like to explore this opportunity</label>
+
+                                <label><input type="radio" name="betaTester" value="Tell me more"> Tell me more about what this involves</label>
+
+                                <label><input type="radio" name="betaTester" value="Not interested"> Not interested right now</label>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <button type="button" class="submit-button" onclick="nextToContact()">Continue to Contact Info →</button>
+
+                </div>
+
+                <!-- STEP 3: Contact Info & Terms -->
+
+                <div id="page3" class="form-page hidden">
+
+                    <div class="form-section">
+
+                        <h4>Contact Information</h4>
+
+                        <div class="form-group">
+
+                            <label>Name: *</label>
+
+                            <input type="text" name="name" id="contactName" placeholder="Your full name" required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Facility Name:</label>
+
+                            <input type="text" name="facilityName" id="facilityName" placeholder="Your facility name">
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Email: *</label>
+
+                            <input type="email" name="email" id="contactEmail" placeholder="your.email@example.com" required>
+
+                        </div>
+
+                        <div class="form-group">
+
+                            <label>Phone:</label>
+
+                            <input type="tel" name="phone" id="contactPhone" placeholder="123-456-7890">
+
+                        </div>
+
+                         <div class="form-group">
+
+                            <label>Any additional comments or challenges we should know about?</label>
+
+                            <textarea name="comments" id="additionalComments" placeholder="Share any other thoughts, concerns, or challenges you're facing..."></textarea>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Raffle Terms -->
+
+                    <div class="form-section">
+
+                        <h4>🎉 Contest Entry</h4>
+
+                        <div class="terms-checkbox">
+
+                            <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+
+                            <label for="agreeTerms">
+
+                                <strong>I agree to the contest terms:</strong> One entry per person. Winner will be randomly selected on <strong>July 1st, 2026</strong> and notified via email. Must respond within 7 days to claim prize. $1,000 prize awarded to winner; if winner also referred someone who completed this survey, total prize is $1,500. Company employees and immediate family members not eligible. No purchase necessary; void where prohibited. Prize paid via check or digital payment within 10 business days. By submitting, I consent to being contacted about survey results and solutions.
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submitBtn">Submit Survey & Enter Raffle</button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Thank You Section -->
+
+<section class="thank-you" id="thankYouSection">
+
+    <div class="container">
+
+        <h2>Thank You for Your Valuable Input!  🙏</h2>
+
+        <p style="font-size: 1.2em;">You're now entered to win $1,000!</p>
+
+        <div class="entry-counter" id="entryCounter">
+            🎫 You currently have <span id="entryCount">1</span> raffle entry
+        </div>
+
+        <div class="next-steps">
+
+            <p><strong>What happens next:</strong></p>
+
+            <ul>
+
+                <li>We'll review your responses carefully</li>
+
+                <li>Winner will be announced July 1st, 2026</li>
+
+                <li>We'll keep you updated on our progress</li>
+
+                <li>Early participants get exclusive access to beta pricing</li>
+
+            </ul>
+
+        </div>
+
+        <!-- Referral Section -->
+
+        <div class="referral-section">
+
+            <h3>Refer Colleagues & Increase Your Winning Chances!</h3>
+
+            <div class="referral-bonus-box">
+                <p><strong>✅ Your survey = 1 entry into the $1,000 raffle</strong></p>
+                
+                <p style="margin-top: 15px;"><strong>🎯 Referral Bonuses:</strong></p>
+                <ul>
+                    <li><strong>1st referral</strong> = $500 bonus added to your prize IF you win ($1,500 total)</li>
+                    <li><strong>2nd referral</strong> = 1 EXTRA raffle entry (2 total entries) + $500 bonus if you win</li>
+                    <li><strong>3rd referral</strong> = 2 EXTRA raffle entries (3 total entries) + $500 bonus if you win</li>
+                    <li><strong>And so on!</strong> Each additional referral = another entry into the raffle</li>
+                </ul>
+                
+                <p style="margin-top: 15px; font-style: italic; color: #555;">
+                    <strong>Example:</strong> Refer 5 colleagues = 5 raffle entries + potential $1,500 prize if selected!
+                </p>
             </div>
 
-            <div style="margin-top: 40px;">
-                <p><strong>Questions? Contact us:</strong></p>
-                <p>📧 <strong>Email:</strong> <a href="mailto:surveybms2026@gmail.com" style="color: white;">surveybms2026@gmail.com</a></p>
-                <p>📞 <strong>Phone:</strong> <a href="tel:+14753298286" style="color: white;">475-329-8286</a></p>
+            <form id="referralForm" style="margin-top: 30px;">
+
+                <div class="form-group">
+
+                    <label>Their Name: *</label>
+
+                    <input type="text" name="refereeName" id="refereeName" placeholder="Colleague's full name" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Their Email: *</label>
+
+                    <input type="email" name="refereeEmail" id="refereeEmail" placeholder="colleague@example.com" required>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Their Facility Name (Optional):</label>
+
+                    <input type="text" name="refereeFacility" id="refereeFacility" placeholder="e.g., Their hospital or facility name">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Their Position (Optional):</label>
+
+                    <input type="text" name="refereePosition" id="refereePosition" placeholder="e.g., CFO, Director of Operations">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Personal Message to Send Them: *</label>
+
+                     <div style="margin-bottom: 15px;">
+
+                        <label style="font-weight: normal; display: block; margin-bottom: 10px;">
+
+                            <input type="radio" name="messageType" value="template" id="useTemplate" checked onchange="toggleMessageType()"> 
+                            Use a template (you can edit it)
+
+                        </label>
+
+                        <label style="font-weight: normal; display: block;">
+
+                            <input type="radio" name="messageType" value="custom" id="useCustom" onchange="toggleMessageType()"> 
+                            Write my own message
+
+                        </label>
+
+                    </div>
+
+                    <div id="templateSelector" style="margin-bottom: 15px;">
+
+                        <label>Choose a template:</label>
+
+                         <select id="messageTemplate" onchange="loadTemplate()" style="margin-bottom: 10px;">
+
+                            <option value="template1">Template 1: Friendly & Professional</option>
+
+                            <option value="template2">Template 2: Direct & Quick</option>
+
+                            <option value="template3">Template 3: Emphasize Raffle</option>
+
+                        </select>
+
+                    </div>
+
+                    <textarea name="personalMessage" id="personalMessage" rows="6" required style="font-family: inherit;"></textarea>
+
+                    <p style="font-size: 0.9em; color: #666; margin-top: 5px;">This  message will be included in the email they receive with the survey link.</p>
+
+                </div>
+
+                <div class="warning-box">
+
+                    <p style="font-weight: bold;">⚠️ IMPORTANT - After Submitting:</p>
+
+                    <p style="margin-top: 10px;">
+
+                        <strong>Please also call or text the person you're referring</strong> to let them know:<br>
+                        💬 "Watch for an email from me with a quick survey - <strong>check your spam folder</strong> if you don't see it!"
+
+                    </p>
+
+                </div>
+
+                <button type="submit" class="submit-button">Send Referral</button>
+
+                <button type="button" class="submit-button" style="background: #6c757d; margin-top: 10px;" onclick="skipReferral()">Skip - No Referral</button>
+
+            </form>
+
+            <!-- Success message (hidden by default) -->
+
+            <div id="referralSuccess" class="success-box" style="display: none;">
+
+                <h4>✅ Referral Submitted!</h4>
+
+                <p style="margin: 15px 0;">
+
+                    We'll send <strong id="refereeNameDisplay"></strong> an email with your personal message and the survey link.
+
+                </p>
+
+                <div class="entry-counter" style="background: #2c7a9e; margin: 20px 0;">
+                    🎫 You now have <span id="referralEntryCount">2</span> raffle entries!
+                </div>
+
+                <div class="warning-box" style="margin-top: 20px;">
+
+                    <p style="font-weight: bold; font-size: 1.1em;">📞 NEXT STEP - Don't forget!</p>
+
+                    <p style="margin-top: 10px; font-size: 1.05em;">
+
+                        <strong>Call or text <span id="refereeNameDisplay2"></span> now</strong> to let them know:<br><br>
+                        💬 <em>"I just sent you an email about a quick healthcare survey. You'll get it from <strong>surveybms2026@gmail.com</strong>. <strong>Check your spam folder</strong> if you don't see it! Takes 3 minutes and you could win $1,000!"</em>
+
+                    </p>
+
+                </div>
+
+                <button type="button" class="submit-button" style="margin-top: 20px;" onclick="addAnotherReferral()">Refer Another Colleague</button>
+
             </div>
+
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <h3>Healthcare Supply Chain Solutions Survey</h3>
-            <p><em>Building innovative solutions for healthcare facilities</em></p>
-            <p style="margin-top: 30px; opacity: 0.7;">&copy; 2026 All rights reserved.</p>
+        <div style="margin-top: 40px;">
+
+            <p><strong>Questions? Contact us:</strong></p>
+
+            <p>📧  <strong>Email:</strong> <a href="mailto:surveybms2026@gmail.com" style="color: white;">surveybms2026@gmail.com</a></p>
+
+            <p>📞 <strong>Phone:</strong> <a href="tel:+14753298286" style="color: white;">475-329-8286</a></p>
+
         </div>
-    </footer>
 
-    <script>
-        // ============================================
-        // CONFIGURATION - UPDATE THIS URL AFTER DEPLOYING GOOGLE APPS SCRIPT
-        // ============================================
-        const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby8yhuk24BqQ7nIBy2zOIMK0XR5QfIKuex87FHzwbZWdw-4Zz9AOI7wBlC4hQLAciFw/exec';
-        
-        // Pain points data by facility type
-        const painPoints = {
-            "Nursing Home": [
-                { icon: "💰", title: "Delayed Reimbursements Crushing Cash Flow?", desc: "Medicare/Medicaid payments take 45-90 days, but suppliers demand payment in 30" },
-                { icon: "📦", title: "Medication & Supply Waste?", desc: "Expired medications and supplies costing thousands monthly due to manual tracking" },
-                { icon: "⏰", title: "Staff Drowning in Inventory Tasks?", desc: "Hours spent counting supplies instead of providing resident care" },
-                { icon: "💸", title: "Emergency Orders Draining Your Budget?", desc: "Last-minute rush orders at premium prices when you run out unexpectedly" }
-            ],
-            "Hospital": [
-                { icon: "📊", title: "Multi-Department Inventory Chaos?", desc: "20+ supply rooms across departments with no centralized visibility or control" },
-                { icon: "💰", title: "Millions Tied Up in Dead Stock?", desc: "Expired supplies, overstock, and obsolete inventory draining capital" },
-                { icon: "🚨", title: "Emergency Order Costs Out of Control?", desc: "Premium pricing on rush orders cutting into already-thin margins" },
-                { icon: "⏱️", title: "Reimbursement Delays Straining Cash Flow?", desc: "Insurance payments lag while suppliers demand immediate payment" }
-            ],
-            "Doctor Office": [
-                { icon: "💳", title: "Cash Flow Gaps?", desc: "Revenue comes in slowly from patient visits, but supply bills are due now" },
-                { icon: "📦", title: "Running Out Mid-Day?", desc: "Stockouts disrupting patient care and forcing expensive same-day orders" },
-                { icon: "⏰", title: "No Time for Inventory?", desc: "Small staff juggling patient care, billing, AND supply tracking" },
-                { icon: "💸", title: "Overpaying for Small Orders?", desc: "Can't afford bulk pricing, stuck paying premium for smaller quantities" }
-            ],
-            "Pharmacy": [
-                { icon: "📋", title: "Controlled Substance Tracking Headaches?", desc: "Manual DEA compliance tracking is time-consuming and error-prone" },
-                { icon: "💰", title: "Medication Expiration = Lost Revenue?", desc: "Thousands in expired medications that couldn't be sold or returned" },
-                { icon: "📦", title: "Unpredictable Demand?", desc: "Either losing sales or tying up cash in slow-moving inventory" },
-                { icon: "⏱️", title: "Payment Terms Don't Match Revenue?", desc: "Insurance reimbursements delayed while wholesalers demand quick payment" }
-            ],
-            "EMS": [
-                { icon: "🚗", title: "Mobile Inventory = Total Chaos?", desc: "Supplies scattered across multiple vehicles with no real-time visibility" },
-                { icon: "⏰", title: "Critical Stockouts in the Field?", desc: "Discovering you're out of essential items during an emergency call" },
-                { icon: "💸", title: "Emergency Restocking Killing Margins?", desc: "Rush orders at premium prices when vehicles run low unexpectedly" },
-                { icon: "📋", title: "Manual Fleet Tracking?", desc: "Hours spent checking and restocking each vehicle manually" }
-            ],
-            "Lab": [
-                { icon: "⚗️", title: "Reagent & Test Kit Expiration Waste?", desc: "Expensive reagents expiring before use due to poor tracking" },
-                { icon: "📊", title: "Inventory Guessing Game?", desc: "Either running out of critical supplies or overstocking expensive reagents" },
-                { icon: "💰", title: "Cash Flow Squeeze?", desc: "Test results delivered immediately, payment received months later" },
-                { icon: "⏱️", title: "Staff Off Core Work?", desc: "Lab techs spending hours counting supplies instead of running tests" }
-            ]
-        };
+    </div>
 
-        // Size options by facility type
-        const sizeOptions = {
-            "Nursing Home": { label: "beds", options: ["Small (Under 50 beds)", "Medium (50-150 beds)", "Large (150-300 beds)", "Very Large (300+ beds)"] },
-            "Hospital": { label: "beds", options: ["Small (Under 100 beds)", "Medium (100-300 beds)", "Large (300-500 beds)", "Very Large (500+ beds)"] },
-            "Doctor Office": { label: "providers", options: ["Solo Practice (1-2 providers)", "Small Practice (3-5 providers)", "Medium Practice (6-10 providers)", "Large Group (10+ providers)"] },
-            "Pharmacy": { label: "locations", options: ["Single Location", "2-5 Locations", "6-15 Locations", "15+ Locations"] },
-            "EMS": { label: "vehicles/units", options: ["Small (1-5 units)", "Medium (6-15 units)", "Large (16-30 units)", "Very Large (30+ units)"] },
-            "Lab": { label: "employees", options: ["Small (1-10 employees)", "Medium (11-25 employees)", "Large (26-50 employees)", "Very Large (50+ employees)"] }
-        };
+</section>
 
-        // Message templates
-        const messageTemplates = {
-            template1: `Hi [NAME],
+<!-- Footer -->
+
+<footer>
+
+    <div class="container">
+
+        <h3>Healthcare Supply Chain Solutions Survey</h3>
+
+        <p><em>Building innovative solutions for healthcare facilities</em></p>
+
+        <p style="margin-top: 30px; opacity: 0.7;">&copy; 2026 All rights reserved.</p>
+
+    </div>
+
+</footer>
+
+<script>
+
+    // ============================================
+    // CONFIGURATION - UPDATE THIS URL AFTER DEPLOYING GOOGLE APPS SCRIPT
+    // ============================================
+    const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby8yhuk24BqQ7nIBy2zOIMK0XR5QfIKuex87FHzwbZWdw-4Zz9AOI7wBlC4hQLAciFw/exec';
+
+    // Pain points data by facility type - UPDATED WITH SOLUTION-FOCUSED MESSAGING
+    const painPoints = {
+        "Nursing Home": [
+            { icon: "📊", title: "Smart Financing Solutions", desc: "Because Medicare/Medicaid reimbursements take 45-90 days, but suppliers want payment in 30" },
+            { icon: "📦", title: "Automated Inventory Tracking", desc: "No more expired medications costing thousands monthly due to manual tracking" },
+            { icon: "⏰", title: "Free Up Your Staff's Time", desc: "Let technology handle supply counting so your team can focus on resident care" },
+            { icon: "💡", title: "Eliminate Emergency Order Premiums", desc: "Never pay rush prices again - always know what you need before you run out" }
+        ],
+        "Hospital": [
+            { icon: "📊", title: "Centralized Multi-Department Visibility", desc: "Because managing 20+ supply rooms across departments without central control is chaos" },
+            { icon: "💰", title: "Free Up Capital from Dead Stock", desc: "Stop losing millions in expired supplies, overstock, and obsolete inventory" },
+            { icon: "🚨", title: "End Emergency Order Cost Overruns", desc: "Never pay premium rush pricing again when margins are already thin" },
+            { icon: "⏱️", title: "Align Payments with Revenue", desc: "Match your supplier payments to insurance reimbursement schedules" }
+        ],
+        "Doctor Office": [
+            { icon: "💳", title: "Bridge Your Cash Flow Gaps", desc: "Because patient visit revenue comes slowly, but supply bills are due now" },
+            { icon: "📦", title: "Never Run Out Mid-Day Again", desc: "Prevent stockouts that disrupt patient care and force expensive same-day orders" },
+            { icon: "⏰", title: "Save Your Small Staff's Time", desc: "Stop juggling patient care, billing, AND manual supply tracking" },
+            { icon: "💸", title: "Access Bulk Pricing Power", desc: "Get better rates even on smaller quantities - stop overpaying" }
+        ],
+        "Pharmacy": [
+            { icon: "📋", title: "Simplify DEA Compliance Tracking", desc: "Automated controlled substance tracking that's accurate and audit-ready" },
+            { icon: "💰", title: "Stop Losing Revenue to Expirations", desc: "No more thousands wasted on expired medications that couldn't be sold or returned" },
+            { icon: "📦", title: "Predict Demand with Confidence", desc: "Stop choosing between lost sales and tying up cash in slow-moving inventory" },
+            { icon: "⏱️", title: "Match Payments to Cash Flow", desc: "Align wholesaler payments with your insurance reimbursement schedule" }
+        ],
+        "EMS": [
+            { icon: "🚗", title: "Real-Time Fleet Inventory Visibility", desc: "Track supplies across all vehicles instantly - no more guessing what's where" },
+            { icon: "⏰", title: "Prevent Critical Field Stockouts", desc: "Always know what's in each vehicle before the emergency call comes in" },
+            { icon: "💸", title: "Stop Emergency Restocking Costs", desc: "Eliminate premium rush orders when vehicles run low unexpectedly" },
+            { icon: "📋", title: "Automate Fleet Tracking", desc: "End the hours spent manually checking and restocking each vehicle" }
+        ],
+        "Lab": [
+            { icon: "⚗️", title: "Prevent Reagent Expiration Waste", desc: "Stop losing money on expensive reagents that expire before use" },
+            { icon: "📊", title: "Smart Inventory Optimization", desc: "Always have critical supplies on hand without overstocking expensive reagents" },
+            { icon: "💰", title: "Bridge the Payment Gap", desc: "Get paid months after delivering results - but pay suppliers upfront" },
+            { icon: "⏱️", title: "Keep Techs Focused on Testing", desc: "Automate supply tracking so lab techs can run tests, not count inventory" }
+        ]
+    };
+
+    // Size options by facility type - UPDATED WITH CONVERSATIONAL PHRASING
+    const sizeOptions = {
+        "Nursing Home": { label: "beds", question: "How many beds does your facility have?", options: ["Small (Under 50 beds)", "Medium (50-150 beds)", "Large (150-300 beds)", "Very Large (300+ beds)"] },
+        "Hospital": { label: "beds", question: "How many beds does your hospital have?", options: ["Small (Under 100 beds)", "Medium (100-300 beds)", "Large (300-500 beds)", "Very Large (500+ beds)"] },
+        "Doctor Office": { label: "providers", question: "How many providers are in your practice?", options: ["Solo Practice (1-2 providers)", "Small Practice (3-5 providers)", "Medium Practice (6-10 providers)", "Large Group (10+ providers)"] },
+        "Pharmacy": { label: "locations", question: "How many locations do you operate?", options: ["Single Location", "2-5 Locations", "6-15 Locations", "15+ Locations"] },
+        "EMS": { label: "vehicles", question: "How many vehicles are in your fleet?", options: ["Small (1-5 vehicles)", "Medium (6-15 vehicles)", "Large (16-30 vehicles)", "Very Large (30+ vehicles)"] },
+        "Lab": { label: "employees", question: "How many employees work at your lab?", options: ["Small (1-10 employees)", "Medium (11-25 employees)", "Large (26-50 employees)", "Very Large (50+ employees)"] }
+    };
+
+    // Message templates
+    const messageTemplates = {
+        template1: `Hi [NAME],
 
 I just completed a quick survey about inventory management and cash flow challenges in healthcare facilities, and I immediately thought of you.
 
@@ -850,9 +1188,10 @@ I think your insights would be really valuable. Would you mind taking a few minu
 Click the link below to get started.
 
 Thanks!
+
 [YOUR_NAME]`,
 
-            template2: `Hey [NAME],
+        template2: `Hey [NAME],
 
 Quick favor - can you fill out this 3-minute healthcare survey? You'll be entered to win $1,000 just for completing it.
 
@@ -861,391 +1200,427 @@ They're gathering feedback to build better inventory and financing solutions for
 Link is below - takes less than 5 minutes!
 
 Thanks,
+
 [YOUR_NAME]`,
 
-            template3: `Hi [NAME],
+        template3: `Hi [NAME],
 
 Want a shot at winning $1,000? 🎉
 
 I just entered a raffle by completing a 3-minute survey about healthcare supply chain challenges. I'm referring you because:
 
-1. You could win $1,000 (and if you do, I get a $500 bonus - we both win!)
-2. Your feedback will help shape solutions for our industry
-3. It's genuinely quick - took me less than 5 minutes
+• You could win $1,000 (and if you do, I get a bonus too - we both win!)
+
+• Your feedback will help shape solutions for our industry
+
+• It's genuinely quick - took me less than 5 minutes
 
 Check your email for the survey link. If you don't see it, check spam!
 
 Good luck!
+
 [YOUR_NAME]`
-        };
+    };
 
-        // Track current state
-        let currentPage = 1;
-        let selectedFacility = '';
-        let selectedRole = '';
-        let submitterEmail = '';
-        let submitterName = '';
+    // Track current state
+    let currentPage = 1;
+    let selectedFacility = '';
+    let selectedRole = '';
+    let submitterEmail = '';
+    let submitterName = '';
+    let referralCount = 0;
 
-        // Navigation functions
-        function nextPage() {
-            const facilityType = document.getElementById('facilityType').value;
-            const role = document.getElementById('role').value;
+    // Navigation functions
+    function nextPage() {
+        const facilityType = document.getElementById('facilityType').value;
+        const role = document.getElementById('role').value;
 
-            if (!facilityType || !role) {
-                alert('Please select both facility type and your role');
-                return;
-            }
-
-            selectedFacility = facilityType;
-            selectedRole = role;
-
-            // Update pain points
-            displayPainPoints(facilityType);
-            
-            // Update facility size section
-            updateSizeOptions(facilityType);
-
-            // Show/hide question sections based on role
-            if (role === 'Finance') {
-                document.getElementById('financeQuestions').classList.remove('hidden');
-                document.getElementById('operationsQuestions').classList.add('hidden');
-                setRequiredFields('finance', true);
-                setRequiredFields('operations', false);
-            } else if (role === 'Operations') {
-                document.getElementById('financeQuestions').classList.add('hidden');
-                document.getElementById('operationsQuestions').classList.remove('hidden');
-                setRequiredFields('finance', false);
-                setRequiredFields('operations', true);
-            } else { // C-Suite
-                document.getElementById('financeQuestions').classList.remove('hidden');
-                document.getElementById('operationsQuestions').classList.remove('hidden');
-                setRequiredFields('finance', true);
-                setRequiredFields('operations', true);
-            }
-
-            // Navigate to page 2
-            document.getElementById('page1').classList.add('hidden');
-            document.getElementById('page2').classList.remove('hidden');
-            updateSteps(2);
-            window.scrollTo(0, 0);
+        if (!facilityType || !role) {
+            alert('Please select both facility type and your role');
+            return;
         }
 
-        function nextToContact() {
-            // Validate current page fields
-            const sizeInputs = document.querySelectorAll('input[name="facilitySize"]');
-            const sizeChecked = Array.from(sizeInputs).some(input => input.checked);
-            if (!sizeChecked) {
-                alert('Please select your facility size');
+        selectedFacility = facilityType;
+        selectedRole = role;
+
+        // Update pain points
+        displayPainPoints(facilityType);
+
+        // Update facility size section
+        updateSizeOptions(facilityType);
+
+        // Show/hide question sections based on role
+        if (role === 'Finance') {
+            document.getElementById('financeQuestions').classList.remove('hidden');
+            document.getElementById('operationsQuestions').classList.add('hidden');
+            document.getElementById('solutionPreferenceSection').classList.add('hidden');
+            setRequiredFields('finance', true);
+            setRequiredFields('operations', false);
+            setRequiredFields('solution', false);
+        } else if (role === 'Operations') {
+            document.getElementById('financeQuestions').classList.add('hidden');
+            document.getElementById('operationsQuestions').classList.remove('hidden');
+            document.getElementById('solutionPreferenceSection').classList.add('hidden');
+            setRequiredFields('finance', false);
+            setRequiredFields('operations', true);
+            setRequiredFields('solution', false);
+        } else { // C-Suite
+            document.getElementById('financeQuestions').classList.remove('hidden');
+            document.getElementById('operationsQuestions').classList.remove('hidden');
+            document.getElementById('solutionPreferenceSection').classList.remove('hidden');
+            setRequiredFields('finance', true);
+            setRequiredFields('operations', true);
+            setRequiredFields('solution', true);
+        }
+
+        // Navigate to page 2
+        document.getElementById('page1').classList.add('hidden');
+        document.getElementById('page2').classList.remove('hidden');
+        updateSteps(2);
+        window.scrollTo(0, 0);
+    }
+
+    function nextToContact() {
+        // Validate current page fields
+        const sizeInputs = document.querySelectorAll('input[name="facilitySize"]');
+        const sizeChecked = Array.from(sizeInputs).some(input => input.checked);
+        if (!sizeChecked) {
+            alert('Please select your facility size');
+            return;
+        }
+
+        // Check role-specific questions
+        if (selectedRole === 'Finance' || selectedRole === 'C-Suite') {
+            if (!document.querySelector('input[name="cashFlowChallenge"]:checked')) {
+                alert('Please answer the cash flow challenge question');
                 return;
             }
-
-            // Check role-specific questions
-            if (selectedRole === 'Finance' || selectedRole === 'C-Suite') {
-                if (!document.querySelector('input[name="cashFlowChallenge"]:checked')) {
-                    alert('Please answer the cash flow challenge question');
-                    return;
-                }
-                if (!document.querySelector('input[name="financing_fee"]:checked')) {
-                    alert('Please answer the financing fee question');
-                    return;
-                }
+            if (!document.querySelector('input[name="financing_fee"]:checked')) {
+                alert('Please answer the financing fee question');
+                return;
             }
+        }
 
-            if (selectedRole === 'Operations' || selectedRole === 'C-Suite') {
-                if (!document.querySelector('input[name="inventoryChallenge"]:checked')) {
-                    alert('Please answer the inventory challenge question');
-                    return;
-                }
-                if (!document.querySelector('input[name="timeOnInventory"]:checked')) {
-                    alert('Please answer the time on inventory question');
-                    return;
-                }
-                if (!document.querySelector('input[name="softwareCost"]:checked')) {
-                    alert('Please answer the software cost question');
-                    return;
-                }
+        if (selectedRole === 'Operations' || selectedRole === 'C-Suite') {
+            if (!document.querySelector('input[name="inventoryChallenge"]:checked')) {
+                alert('Please answer the inventory challenge question');
+                return;
             }
+            if (!document.querySelector('input[name="timeOnInventory"]:checked')) {
+                alert('Please answer the time on inventory question');
+                return;
+            }
+            if (!document.querySelector('input[name="softwareCost"]:checked')) {
+                alert('Please answer the software cost question');
+                return;
+            }
+        }
 
-            // Check solution preference
+        // Check C-Suite specific questions
+        if (selectedRole === 'C-Suite') {
             if (!document.querySelector('input[name="solutionPreference"]:checked')) {
-                alert('Please answer which solution would be more valuable');
+                alert('Please answer which solution would have the biggest impact');
                 return;
             }
-
-            // Check discovery call
             if (!document.querySelector('input[name="discoveryCall"]:checked')) {
                 alert('Please answer whether you\'re interested in a discovery call');
                 return;
             }
-
-            // Check beta tester
             if (!document.querySelector('input[name="betaTester"]:checked')) {
                 alert('Please answer whether you\'re interested in being a beta tester');
                 return;
             }
-
-            // Navigate to page 3
-            document.getElementById('page2').classList.add('hidden');
-            document.getElementById('page3').classList.remove('hidden');
-            updateSteps(3);
-            window.scrollTo(0, 0);
         }
 
-        function displayPainPoints(facilityType) {
-            const points = painPoints[facilityType];
-            const container = document.getElementById('painPointsDisplay');
-            
-            let html = '<div class="pain-points">';
-            points.forEach(point => {
-                html += `
-                    <div class="pain-point">
-                        <h4>${point.icon} ${point.title}</h4>
-                        <p>${point.desc}</p>
-                    </div>
-                `;
-            });
-            html += '</div>';
-            
-            container.innerHTML = html;
+        // Navigate to page 3
+        document.getElementById('page2').classList.add('hidden');
+        document.getElementById('page3').classList.remove('hidden');
+        updateSteps(3);
+        window.scrollTo(0, 0);
+    }
+
+    function displayPainPoints(facilityType) {
+        const points = painPoints[facilityType];
+        const container = document.getElementById('painPointsDisplay');
+
+        let html = '<div class="pain-points">';
+        points.forEach(point => {
+            html += `
+                <div class="pain-point">
+                    <h4>${point.icon} ${point.title}</h4>
+                    <p>${point.desc}</p>
+                </div>
+            `;
+        });
+        html += '</div>';
+
+        container.innerHTML = html;
+    }
+
+    function updateSizeOptions(facilityType) {
+        const config = sizeOptions[facilityType];
+        const label = document.getElementById('sizeLabel');
+        const container = document.getElementById('sizeOptions');
+
+        label.textContent = `3. ${config.question} *`;
+
+        let html = '';
+        config.options.forEach(option => {
+            html += `<label><input type="radio" name="facilitySize" value="${option}" required> ${option}</label>`;
+        });
+
+        container.innerHTML = html;
+    }
+
+    function setRequiredFields(section, required) {
+        let selector = '';
+        if (section === 'finance') {
+            selector = 'input[name="cashFlowChallenge"], input[name="financing_fee"]';
+        } else if (section === 'operations') {
+            selector = 'input[name="inventoryChallenge"], input[name="timeOnInventory"], input[name="softwareCost"]';
+        } else if (section === 'solution') {
+            selector = 'input[name="solutionPreference"], input[name="discoveryCall"], input[name="betaTester"]';
         }
 
-        function updateSizeOptions(facilityType) {
-            const config = sizeOptions[facilityType];
-            const label = document.getElementById('sizeLabel');
-            const container = document.getElementById('sizeOptions');
-
-            label.textContent = `3. What is the size of your facility (${config.label})? *`;
-            
-            let html = '';
-            config.options.forEach(option => {
-                html += `<label><input type="radio" name="facilitySize" value="${option}" required> ${option}</label>`;
-            });
-            
-            container.innerHTML = html;
-        }
-
-        function setRequiredFields(section, required) {
-            const selector = section === 'finance' ? 
-                'input[name="cashFlowChallenge"], input[name="financing_fee"]' :
-                'input[name="inventoryChallenge"], input[name="timeOnInventory"], input[name="softwareCost"]';
-            
-             document.querySelectorAll(selector).forEach(input => {
-                if (required) {
-                    input.setAttribute('required', 'required');
-                } else {
-                    input.removeAttribute('required');
-                }
-            });
-        }
-
-        function updateSteps(activeStep) {
-            for (let i = 1; i <= 3; i++) {
-                const step = document.getElementById(`step${i}`);
-                if (i < activeStep) {
-                    step.classList.add('completed');
-                    step.classList.remove('active');
-                } else if (i === activeStep) {
-                    step.classList.add('active');
-                    step.classList.remove('completed');
-                } else {
-                    step.classList.remove('active', 'completed');
-                }
-            }
-        }
-
-        function toggleMessageType() {
-            const templateDiv = document.getElementById('templateSelector');
-            const useTemplate = document.getElementById('useTemplate').checked;
-            
-            if (useTemplate) {
-                templateDiv.style.display = 'block';
-                loadTemplate();
+         document.querySelectorAll(selector).forEach(input => {
+            if (required) {
+                input.setAttribute('required', 'required');
             } else {
-                templateDiv.style.display = 'none';
-                document.getElementById('personalMessage').value = '';
-                document.getElementById('personalMessage').placeholder = 'Write your personal message here...';
+                input.removeAttribute('required');
             }
-        }
-
-        function loadTemplate() {
-            const templateKey = document.getElementById('messageTemplate').value;
-            const refereeName = document.getElementById('refereeName').value || '[THEIR NAME]';
-            const yourName = submitterName || '[YOUR NAME]';
-            
-            let message = messageTemplates[templateKey];
-            message = message.replace('[NAME]', refereeName);
-            message = message.replace('[YOUR_NAME]', yourName);
-            
-            document.getElementById('personalMessage').value = message;
-        }
-
-        // Create hidden iframe for form submission
-        const iframe = document.createElement('iframe');
-        iframe.name = 'hidden_iframe';
-        iframe.style.display = 'none';
-        document.body.appendChild(iframe);
-
-        // Form submission handler
-        document.getElementById('surveyForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const submitButton = document.getElementById('submitBtn');
-            const agreeTerms = document.getElementById('agreeTerms').checked;
-
-            if (!agreeTerms) {
-                alert('Please agree to the contest terms to enter the raffle');
-                return;
-            }
-
-            // Disable submit button
-            submitButton.disabled = true;
-            submitButton.textContent = 'Submitting...';
-
-            // Collect form data
-            const formData = new FormData(this);
-            formData.append('submissionType', 'survey');
-            submitterEmail = formData.get('email');
-            submitterName = formData.get('name');
-
-            console.log('Sending survey data:', Object.fromEntries(formData));
-
-            // Create a temporary form that submits to the iframe
-            const tempForm = document.createElement('form');
-            tempForm.method = 'POST';
-            tempForm.action = WEBHOOK_URL;
-            tempForm.target = 'hidden_iframe';
-            tempForm.style.display = 'none';
-
-            // Add all form fields to temp form
-            for (let [key, value] of formData.entries()) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                tempForm.appendChild(input);
-            }
-
-            document.body.appendChild(tempForm);
-            tempForm.submit();
-
-            // Wait a moment then show success
-            setTimeout(function() {
-                // Hide form, show thank you
-                document.getElementById('survey').style.display = 'none';
-                document.getElementById('thankYouSection').classList.add('show');
-
-                // Scroll to thank you section
-                document.getElementById('thankYouSection').scrollIntoView({
-                    behavior: 'smooth'
-                });
-
-                // Load template for referral form
-                setTimeout(() => {
-                    loadTemplate();
-                }, 500);
-
-                // Clean up
-                document.body.removeChild(tempForm);
-            }, 1000);
         });
+    }
 
-        // Referral form handler
-        document.getElementById('referralForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            const refereeName = document.getElementById('refereeName').value;
-            const refereeEmail = document.getElementById('refereeEmail').value;
-            const personalMessage = document.getElementById('personalMessage').value;
-
-            if (!refereeName || !refereeEmail || !personalMessage) {
-                alert('Please fill in all required fields including the personal message');
-                return;
+    function updateSteps(activeStep) {
+        for (let i = 1; i <= 3; i++) {
+            const step = document.getElementById(`step${i}`);
+            if (i < activeStep) {
+                step.classList.add('completed');
+                step.classList.remove('active');
+            } else if (i === activeStep) {
+                step.classList.add('active');
+                step.classList.remove('completed');
+            } else {
+                step.classList.remove('active', 'completed');
             }
+        }
+    }
 
-            const submitBtn = this.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
+    function updateEntryDisplay() {
+        const entryText = referralCount === 1 ? '1 raffle entry' : `${referralCount} raffle entries`;
+        document.getElementById('entryCount').textContent = referralCount;
+        document.getElementById('entryCounter').innerHTML = `🎫 You currently have <span id="entryCount">${referralCount}</span> ${entryText.includes('entries') ? 'raffle entries' : 'raffle entry'}`;
+    }
 
-            // Create referral submission
-            const referralData = new FormData();
-            referralData.append('submissionType', 'referral');
-            referralData.append('referrerEmail', submitterEmail);
-            referralData.append('referrerName', submitterName);
-            referralData.append('refereeName', refereeName);
-            referralData.append('refereeEmail', refereeEmail);
-            referralData.append('refereeFacility', document.getElementById('refereeFacility').value);
-            referralData.append('refereePosition', document.getElementById('refereePosition').value);
-            referralData.append('personalMessage', personalMessage);
-            referralData.append('messageType', document.querySelector('input[name="messageType"]:checked').value);
+    function toggleMessageType() {
+        const templateDiv = document.getElementById('templateSelector');
+        const useTemplate = document.getElementById('useTemplate').checked;
 
-            console.log('Sending referral data:', Object.fromEntries(referralData));
+        if (useTemplate) {
+            templateDiv.style.display = 'block';
+            loadTemplate();
+        } else {
+            templateDiv.style.display = 'none';
+            document.getElementById('personalMessage').value = '';
+            document.getElementById('personalMessage').placeholder = 'Write your personal message here...';
+         }
+    }
 
-            // Submit referral
-            const tempForm = document.createElement('form');
-            tempForm.method = 'POST';
-            tempForm.action = WEBHOOK_URL;
-            tempForm.target = 'hidden_iframe';
-            tempForm.style.display = 'none';
+    function loadTemplate() {
+        const templateKey = document.getElementById('messageTemplate').value;
+        const refereeName = document.getElementById('refereeName').value || '[THEIR NAME]';
+        const yourName = submitterName || '[YOUR NAME]';
 
-            for (let [key, value] of referralData.entries()) {
-                const input = document.createElement('input');
-                input.type = 'hidden';
-                input.name = key;
-                input.value = value;
-                tempForm.appendChild(input);
-            }
+        let message = messageTemplates[templateKey];
+        message = message.replace('[NAME]', refereeName);
+        message = message.replace('[YOUR_NAME]', yourName);
 
-            document.body.appendChild(tempForm);
-            tempForm.submit();
+        document.getElementById('personalMessage').value = message;
+    }
 
-            setTimeout(function() {
-                // Hide form, show success message
-                document.getElementById('referralForm').style.display = 'none';
-                document.getElementById('referralSuccess').style.display = 'block';
-                document.getElementById('refereeNameDisplay').textContent = refereeName;
-                document.getElementById('refereeNameDisplay2').textContent = refereeName;
-                
-                // Clean up
-                document.body.removeChild(tempForm);
-            }, 500);
-        });
+    // Create hidden iframe for form submission
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden_iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
 
-        function addAnotherReferral() {
-            // Reset and show form again
-            document.getElementById('referralForm').reset();
-            document.getElementById('referralForm').style.display = 'block';
-            document.getElementById('referralSuccess').style.display = 'none';
-            document.getElementById('referralForm').querySelector('button[type="submit"]').disabled = false;
-            document.getElementById('referralForm').querySelector('button[type="submit"]').textContent = 'Send Referral';
-            
-            // Reset to template mode
-            document.getElementById('useTemplate').checked = true;
-            toggleMessageType();
+    // Form submission handler
+    document.getElementById('surveyForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const submitButton = document.getElementById('submitBtn');
+        const agreeTerms = document.getElementById('agreeTerms').checked;
+
+        if (!agreeTerms) {
+            alert('Please agree to the contest terms to enter the raffle');
+            return;
         }
 
-        function skipReferral() {
-            document.querySelector('.referral-section').style.display = 'none';
+        // Disable submit button
+        submitButton.disabled = true;
+        submitButton.textContent = 'Submitting...';
+
+        // Collect form data
+        const formData = new FormData(this);
+        formData.append('submissionType', 'survey');
+        formData.append('referralCount', '0'); // Initial submission
+        submitterEmail = formData.get('email');
+        submitterName = formData.get('name');
+        referralCount = 1; // Start with 1 entry
+
+        console.log('Sending survey data:', Object.fromEntries(formData));
+
+        // Create a temporary form that submits to the iframe
+        const tempForm = document.createElement('form');
+        tempForm.method = 'POST';
+        tempForm.action = WEBHOOK_URL;
+        tempForm.target = 'hidden_iframe';
+        tempForm.style.display = 'none';
+
+        // Add all form fields to temp form
+        for (let [key, value] of formData.entries()) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            tempForm.appendChild(input);
         }
 
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+
+        // Wait a moment then show success
+        setTimeout(function() {
+            // Hide form, show thank you
+            document.getElementById('survey').style.display = 'none';
+            document.getElementById('thankYouSection').classList.add('show');
+
+            // Update entry counter
+            updateEntryDisplay();
+
+            // Scroll to thank you section
+            document.getElementById('thankYouSection').scrollIntoView({
+                behavior: 'smooth'
             });
-        });
 
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Survey page loaded - ready to collect responses!');
+            // Load template for referral form
+            setTimeout(() => {
+                loadTemplate();
+            }, 500);
+
+            // Clean up
+            document.body.removeChild(tempForm);
+        }, 1000);
+    });
+
+    // Referral form handler
+    document.getElementById('referralForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const refereeName = document.getElementById('refereeName').value;
+        const refereeEmail = document.getElementById('refereeEmail').value;
+        const personalMessage = document.getElementById('personalMessage').value;
+
+        if (!refereeName || !refereeEmail || !personalMessage) {
+            alert('Please fill in all required fields including the personal message');
+            return;
+        }
+
+        const submitBtn = this.querySelector('button[type="submit"]');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+
+        // Create referral submission
+        const referralData = new FormData();
+        referralData.append('submissionType', 'referral');
+        referralData.append('referrerEmail', submitterEmail);
+        referralData.append('referrerName', submitterName);
+        referralData.append('refereeName', refereeName);
+        referralData.append('refereeEmail', refereeEmail);
+        referralData.append('refereeFacility', document.getElementById('refereeFacility').value);
+        referralData.append('refereePosition', document.getElementById('refereePosition').value);
+        referralData.append('personalMessage', personalMessage);
+        referralData.append('messageType', document.querySelector('input[name="messageType"]:checked').value);
+        
+        // Increment referral count
+        referralCount++;
+        referralData.append('referralCount', referralCount.toString());
+
+        console.log('Sending referral data:', Object.fromEntries(referralData));
+
+        // Submit referral
+        const tempForm = document.createElement('form');
+        tempForm.method = 'POST';
+        tempForm.action = WEBHOOK_URL;
+        tempForm.target = 'hidden_iframe';
+        tempForm.style.display = 'none';
+
+        for (let [key, value] of referralData.entries()) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value;
+            tempForm.appendChild(input);
+        }
+
+        document.body.appendChild(tempForm);
+        tempForm.submit();
+
+        setTimeout(function() {
+            // Hide form, show success message
+            document.getElementById('referralForm').style.display = 'none';
+            document.getElementById('referralSuccess').style.display = 'block';
+            document.getElementById('refereeNameDisplay').textContent = refereeName;
+            document.getElementById('refereeNameDisplay2').textContent = refereeName;
+            
+            // Update entry count display
+            document.getElementById('referralEntryCount').textContent = referralCount;
+            document.getElementById('entryCount').textContent = referralCount;
+            document.getElementById('entryCounter').innerHTML = `🎫 You currently have <span id="entryCount">${referralCount}</span> raffle ${referralCount === 1 ? 'entry' : 'entries'}`;
+
+            // Clean up
+            document.body.removeChild(tempForm);
+        }, 500);
+    });
+
+    function addAnotherReferral() {
+        // Reset and show form again
+        document.getElementById('referralForm').reset();
+        document.getElementById('referralForm').style.display = 'block';
+        document.getElementById('referralSuccess').style.display = 'none';
+        document.getElementById('referralForm').querySelector('button[type="submit"]').disabled = false;
+        document.getElementById('referralForm').querySelector('button[type="submit"]').textContent = 'Send Referral';
+
+        // Reset to template mode
+        document.getElementById('useTemplate').checked = true;
+        toggleMessageType();
+    }
+
+    function skipReferral() {
+        document.querySelector('.referral-section').style.display = 'none';
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
-    </script>
+    });
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Survey page loaded - ready to collect responses!');
+    });
+
+</script>
 
 </body>
+
 </html>
