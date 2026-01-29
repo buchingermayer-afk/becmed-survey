@@ -14,7 +14,7 @@
 
 <style>
 
-     * {
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
@@ -81,7 +81,7 @@
 
     .value-props strong {
         font-size: 1.15em;
-     }
+    }
 
     /* Section Styles */
     section {
@@ -154,7 +154,7 @@
         font-size: 1.4em;
         color: #2c7a9e;
         margin-bottom: 25px;
-        padding-bottom: 10px;
+         padding-bottom: 10px;
         border-bottom: 2px solid #28a745;
     }
 
@@ -243,7 +243,7 @@
     .step-indicator {
         display: flex;
         justify-content: center;
-        margin-bottom:  40px;
+        margin-bottom: 40px;
         gap: 20px;
     }
 
@@ -592,7 +592,7 @@
 
                         <div class="form-group">
 
-                             <label>2. What is your role? *</label>
+                            <label>2. What is your role? *</label>
 
                             <select name="role" id="role" required>
 
@@ -830,7 +830,7 @@
 
                         <div class="form-group">
 
-                             <label>Name: *</label>
+                            <label>Name: *</label>
 
                             <input type="text" name="name" id="contactName" placeholder="Your full name" required>
 
@@ -882,7 +882,7 @@
 
                             <label for="agreeTerms">
 
-                                <strong>I agree to the contest terms:</strong> One entry per person. Winner will be randomly selected on <strong>July 1st, 2026</strong> and notified via email. Must respond within 7 days to claim prize. $1,000 prize awarded to winner; if winner also referred someone who completed this survey, total prize is $1,500. Company employees and immediate family members not eligible. No purchase necessary; void where prohibited. Prize paid via check or digital payment within 10 business days. By submitting, I consent to being contacted about survey results and solutions.
+                                 <strong>I agree to the contest terms:</strong> One entry per person. Winner will be randomly selected on <strong>July 1st, 2026</strong> and notified via email. Must respond within 7 days to claim prize. $1,000 prize awarded to winner; if winner also referred someone who completed this survey, total prize is $1,500. Company employees and immediate family members not eligible. No purchase necessary; void where prohibited. Prize paid via check or digital payment within 10 business days. By submitting, I consent to being contacted about survey results and solutions.
 
                             </label>
 
@@ -934,7 +934,7 @@
 
         </div>
 
-        <!-- Referral Section -->
+         <!-- Referral Section -->
 
         <div class="referral-section">
 
@@ -942,7 +942,7 @@
 
             <div class="referral-bonus-box">
                 <p><strong>✅ Your survey = 1 entry into the $1,000 raffle</strong></p>
-                 
+                
                 <p style="margin-top: 15px;"><strong>🎯 Referral Bonuses:</strong></p>
                 <ul>
                     <li><strong>1st referral</strong> = $500 bonus added to your prize IF you win ($1,500 total)</li>
@@ -1076,7 +1076,7 @@
                     <p style="margin-top: 10px; font-size: 1.05em;">
 
                         <strong>Call or text <span id="refereeNameDisplay2"></span> now</strong> to let them know:<br><br>
-                        💬 <em>"I just sent you an email about a quick healthcare survey. You'll get it from <strong>surveybms2026@gmail.com</strong>. <strong>Check your spam folder</strong> if you don't see it! Takes 3 minutes and you could win $1,000!"</em>
+                        💬  <em>"I just sent you an email about a quick healthcare survey. You'll get it from <strong>surveybms2026@gmail.com</strong>. <strong>Check your spam folder</strong> if you don't see it! Takes 3 minutes and you could win $1,000!"</em>
 
                     </p>
 
@@ -1120,12 +1120,8 @@
 
 <script>
 
-    // ============================================
-    // CONFIGURATION
-    // ============================================
     const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycby8yhuk24BqQ7nIBy2zOIMK0XR5QfIKuex87FHzwbZWdw-4Zz9AOI7wBlC4hQLAciFw/exec';
 
-    // Pain points data by facility type
     const painPoints = {
         "Nursing Home": [
             { icon: "📊", title: "Smart Financing Solutions", desc: "Because Medicare/Medicaid reimbursements take 45-90 days, but suppliers want payment in 30" },
@@ -1165,17 +1161,15 @@
         ]
     };
 
-    // Size options by facility type
     const sizeOptions = {
-        "Nursing Home": { label: "beds", question: "How many beds does your facility have?", options: ["Small (Under 50 beds)", "Medium (50-150 beds)", "Large (150-300 beds)", "Very Large (300+ beds)"] },
-        "Hospital": { label: "beds", question: "How many beds does your hospital have?", options: ["Small (Under 100 beds)", "Medium (100-300 beds)", "Large (300-500 beds)", "Very Large (500+ beds)"] },
-        "Doctor Office": { label: "providers", question: "How many providers are in your practice?", options: ["Solo Practice (1-2 providers)", "Small Practice (3-5 providers)", "Medium Practice (6-10 providers)", "Large Group (10+ providers)"] },
-        "Pharmacy": { label: "locations", question: "How many locations do you operate?", options: ["Single Location", "2-5 Locations", "6-15 Locations", "15+ Locations"] },
-        "EMS": { label: "vehicles", question: "How many vehicles are in your fleet?", options: ["Small (1-5 vehicles)", "Medium (6-15 vehicles)", "Large (16-30 vehicles)", "Very Large (30+ vehicles)"] },
-        "Lab": { label: "employees", question: "How many employees work at your lab?", options: ["Small (1-10 employees)", "Medium (11-25 employees)", "Large (26-50 employees)", "Very Large (50+ employees)"] }
+        "Nursing Home": { question: "How many beds does your facility have?", options: ["Small (Under 50 beds)", "Medium (50-150 beds)", "Large (150-300 beds)", "Very Large (300+ beds)"] },
+        "Hospital": { question: "How many beds does your hospital have?", options: ["Small (Under 100 beds)", "Medium (100-300 beds)", "Large (300-500 beds)", "Very Large (500+ beds)"] },
+        "Doctor Office": { question: "How many providers are in your practice?", options: ["Solo Practice (1-2 providers)", "Small Practice (3-5 providers)", "Medium Practice (6-10 providers)", "Large Group (10+ providers)"] },
+        "Pharmacy": { question: "How many locations do you operate?", options: ["Single Location", "2-5 Locations", "6-15 Locations", "15+ Locations"] },
+        "EMS": { question: "How many vehicles are in your fleet?", options: ["Small (1-5 vehicles)", "Medium (6-15 vehicles)", "Large (16-30 vehicles)", "Very Large (30+ vehicles)"] },
+        "Lab": { question: "How many employees work at your lab?", options: ["Small (1-10 employees)", "Medium (11-25 employees)", "Large (26-50 employees)", "Very Large (50+ employees)"] }
     };
 
-    // Message templates
     const messageTemplates = {
         template1: `Hi [NAME],
 
@@ -1188,8 +1182,7 @@ I think your insights would be really valuable. Would you mind taking a few minu
 Click the link below to get started.
 
 Thanks!
-
-[YOUR_NAME]`,
+ [YOUR_NAME]`,
 
         template2: `Hey [NAME],
 
@@ -1198,7 +1191,8 @@ Quick favor - can you fill out this 3-minute healthcare survey? You'll be entere
 They're gathering feedback to build better inventory and financing solutions for facilities like ours. I just finished it and thought you'd have great input.
 
 Link is below - takes less than 5 minutes!
- Thanks,
+
+Thanks,
 
 [YOUR_NAME]`,
 
@@ -1215,12 +1209,12 @@ I just entered a raffle by completing a 3-minute survey about healthcare supply 
 • It's genuinely quick - took me less than 5 minutes
 
 Check your email for the survey link. If you don't see it, check spam!
- Good luck!
+
+Good luck!
 
 [YOUR_NAME]`
     };
 
-    // Track current state
     let currentPage = 1;
     let selectedFacility = '';
     let selectedRole = '';
@@ -1228,7 +1222,6 @@ Check your email for the survey link. If you don't see it, check spam!
     let submitterName = '';
     let referralCount = 0;
 
-    // Navigation functions
     function nextPage() {
         const facilityType = document.getElementById('facilityType').value;
         const role = document.getElementById('role').value;
@@ -1241,13 +1234,9 @@ Check your email for the survey link. If you don't see it, check spam!
         selectedFacility = facilityType;
         selectedRole = role;
 
-        // Update pain points
         displayPainPoints(facilityType);
-
-        // Update facility size section
         updateSizeOptions(facilityType);
 
-        // Show/hide question sections based on role
         if (role === 'Finance') {
             document.getElementById('financeQuestions').classList.remove('hidden');
             document.getElementById('operationsQuestions').classList.add('hidden');
@@ -1256,29 +1245,24 @@ Check your email for the survey link. If you don't see it, check spam!
             document.getElementById('financeQuestions').classList.add('hidden');
             document.getElementById('operationsQuestions').classList.remove('hidden');
             document.getElementById('solutionPreferenceSection').classList.add('hidden');
-        } else { // C-Suite
+        } else {
             document.getElementById('financeQuestions').classList.remove('hidden');
             document.getElementById('operationsQuestions').classList.remove('hidden');
             document.getElementById('solutionPreferenceSection').classList.remove('hidden');
         }
 
-        // Navigate to page 2
         document.getElementById('page1').classList.add('hidden');
         document.getElementById('page2').classList.remove('hidden');
         updateSteps(2);
         
-        // FIXED: Scroll to survey section, not top of page
         document.getElementById('survey').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
     function nextToContact() {
-        // NO VALIDATION - Allow users to skip questions
-        // Navigate to page 3
         document.getElementById('page2').classList.add('hidden');
         document.getElementById('page3').classList.remove('hidden');
         updateSteps(3);
         
-        // FIXED: Scroll to survey section, not top of page
         document.getElementById('survey').scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
@@ -1320,7 +1304,7 @@ Check your email for the survey link. If you don't see it, check spam!
             const step = document.getElementById(`step${i}`);
             if (i < activeStep) {
                 step.classList.add('completed');
-                 step.classList.remove('active');
+                step.classList.remove('active');
             } else if (i === activeStep) {
                 step.classList.add('active');
                 step.classList.remove('completed');
@@ -1362,13 +1346,11 @@ Check your email for the survey link. If you don't see it, check spam!
         document.getElementById('personalMessage').value = message;
     }
 
-    // Create hidden iframe for form submission
     const iframe = document.createElement('iframe');
     iframe.name = 'hidden_iframe';
     iframe.style.display = 'none';
     document.body.appendChild(iframe);
 
-    // Form submission handler
     document.getElementById('surveyForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -1380,11 +1362,9 @@ Check your email for the survey link. If you don't see it, check spam!
             return;
         }
 
-        // Disable submit button
         submitButton.disabled = true;
         submitButton.textContent = 'Submitting...';
 
-        // Collect form data
         const formData = new FormData(this);
         formData.append('submissionType', 'survey');
         formData.append('referralCount', '0');
@@ -1392,16 +1372,12 @@ Check your email for the survey link. If you don't see it, check spam!
         submitterName = formData.get('name');
         referralCount = 1;
 
-        console.log('Sending survey data:', Object.fromEntries(formData));
-
-        // Create a temporary form that submits to the iframe
         const tempForm = document.createElement('form');
         tempForm.method = 'POST';
         tempForm.action = WEBHOOK_URL;
         tempForm.target = 'hidden_iframe';
         tempForm.style.display = 'none';
 
-        // Add all form fields to temp form
         for (let [key, value] of formData.entries()) {
             const input = document.createElement('input');
             input.type = 'hidden';
@@ -1413,31 +1389,24 @@ Check your email for the survey link. If you don't see it, check spam!
         document.body.appendChild(tempForm);
         tempForm.submit();
 
-        // Wait a moment then show success
         setTimeout(function() {
-            // Hide form, show thank you
             document.getElementById('survey').style.display = 'none';
             document.getElementById('thankYouSection').classList.add('show');
 
-            // Update entry counter
             updateEntryDisplay();
 
-            // Scroll to thank you section
             document.getElementById('thankYouSection').scrollIntoView({
                 behavior: 'smooth'
             });
 
-            // Load template for referral form
             setTimeout(() => {
                 loadTemplate();
             }, 500);
 
-            // Clean up
             document.body.removeChild(tempForm);
         }, 1000);
     });
 
-    // Referral form handler
     document.getElementById('referralForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -1454,7 +1423,6 @@ Check your email for the survey link. If you don't see it, check spam!
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        // Create referral submission
         const referralData = new FormData();
         referralData.append('submissionType', 'referral');
         referralData.append('referrerEmail', submitterEmail);
@@ -1466,13 +1434,9 @@ Check your email for the survey link. If you don't see it, check spam!
         referralData.append('personalMessage', personalMessage);
         referralData.append('messageType', document.querySelector('input[name="messageType"]:checked').value);
         
-        // Increment referral count
         referralCount++;
         referralData.append('referralCount', referralCount.toString());
 
-        console.log('Sending referral data:', Object.fromEntries(referralData));
-
-        // Submit referral
         const tempForm = document.createElement('form');
         tempForm.method = 'POST';
         tempForm.action = WEBHOOK_URL;
@@ -1491,31 +1455,26 @@ Check your email for the survey link. If you don't see it, check spam!
         tempForm.submit();
 
         setTimeout(function() {
-            // Hide form, show success message
             document.getElementById('referralForm').style.display = 'none';
             document.getElementById('referralSuccess').style.display = 'block';
             document.getElementById('refereeNameDisplay').textContent = refereeName;
             document.getElementById('refereeNameDisplay2').textContent = refereeName;
-             
-            // Update entry count display
+            
             document.getElementById('referralEntryCount').textContent = referralCount;
             document.getElementById('entryCount').textContent = referralCount;
             document.getElementById('entryCounter').innerHTML = `🎫 You currently have <span id="entryCount">${referralCount}</span> raffle ${referralCount === 1 ? 'entry' : 'entries'}`;
 
-            // Clean up
             document.body.removeChild(tempForm);
         }, 500);
     });
 
     function addAnotherReferral() {
-        // Reset and show form again
         document.getElementById('referralForm').reset();
         document.getElementById('referralForm').style.display = 'block';
         document.getElementById('referralSuccess').style.display = 'none';
         document.getElementById('referralForm').querySelector('button[type="submit"]').disabled = false;
         document.getElementById('referralForm').querySelector('button[type="submit"]').textContent = 'Send Referral';
 
-        // Reset to template mode
         document.getElementById('useTemplate').checked = true;
         toggleMessageType();
     }
@@ -1524,7 +1483,6 @@ Check your email for the survey link. If you don't see it, check spam!
         document.querySelector('.referral-section').style.display = 'none';
     }
 
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -1538,7 +1496,6 @@ Check your email for the survey link. If you don't see it, check spam!
         });
     });
 
-    // Initialize on page load
     document.addEventListener('DOMContentLoaded', function() {
         console.log('Survey page loaded - ready to collect responses!');
     });
